@@ -20,6 +20,7 @@ import { Subscribe1Component } from 'src/app/layout/componentes/subscribe-1/subs
 import { CarouselOwl1Component } from 'src/app/layout/componentes/carousel-owl-1/carousel-owl-1.component';
 import { Header2Component } from 'src/app/layout/componentes/header-2/header-2.component';
 import { BannerContenido1Component } from 'src/app/layout/componentes/banner-contenido-1/banner-contenido-1.component';
+import { FooterLogoComponent } from 'src/app/layout/componentes/footer-logo/footer-logo.component';
 
 @Component({
   selector: 'app-vista',
@@ -44,6 +45,7 @@ import { BannerContenido1Component } from 'src/app/layout/componentes/banner-con
     CarouselOwl1Component,
     Header2Component,
     BannerContenido1Component,
+    FooterLogoComponent,
   ],
   templateUrl: './vista.component.html',
   styleUrl: './vista.component.css',
