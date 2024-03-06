@@ -5,6 +5,7 @@ import { Feature1Component } from 'src/app/layout/componentes/feature-1/feature-
 import { Services1Component } from 'src/app/layout/componentes/services-1/services-1.component';
 import { CarouselOwl2Component } from 'src/app/layout/componentes/carousel-owl-2/carousel-owl-2.component';
 import { SubtituloParrafo1Component } from 'src/app/layout/componentes/subtitulo-parrafo-1/subtitulo-parrafo-1.component';
+import { Feature2Component } from 'src/app/layout/componentes/feature-2/feature-2.component';
 
 @Component({
   selector: 'app-inicio',
@@ -16,6 +17,7 @@ import { SubtituloParrafo1Component } from 'src/app/layout/componentes/subtitulo
     Services1Component,
     CarouselOwl2Component,
     SubtituloParrafo1Component,
+    Feature2Component,
   ],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css',
