@@ -22,7 +22,8 @@ module.exports = {
       },
       fontFamily: {
         test_fuente: ["Gloria Hallelujah", "cursive"],
-        roboto: ["Roboto", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
+        cinzel: ["Cinzel", "serif"],
       },
       backgroundImage: {
         "close-menu": "url('/assets/images/icons/icon-close.svg')",
