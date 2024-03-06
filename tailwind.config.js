@@ -21,9 +21,11 @@ module.exports = {
         rojo_claro: "#dea69e",
       },
       fontFamily: {
+        parrafo: ["Montserrat", "sans-serif"],
         test_fuente: ["Gloria Hallelujah", "cursive"],
-        montserrat: ["Montserrat", "sans-serif"],
-        cinzel: ["Cinzel", "serif"],
+        subtitulo: ["Cinzel", "serif"],
+        texto: ["Montserrat", "sans-serif"],
+        titulo: ["Cinzel", "serif"],
       },
       backgroundImage: {
         "close-menu": "url('/assets/images/icons/icon-close.svg')",
