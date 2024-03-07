@@ -9,6 +9,7 @@ import { Feature2Component } from 'src/app/layout/componentes/feature-2/feature-
 import { Services2Component } from 'src/app/layout/componentes/services-2/services-2.component';
 import { BannerContenido1Component } from 'src/app/layout/componentes/banner-contenido-1/banner-contenido-1.component';
 import { BannerContenido2Component } from 'src/app/layout/componentes/banner-contenido-2/banner-contenido-2.component';
+import { SubtituloParrafo2Component } from 'src/app/layout/componentes/subtitulo-parrafo-2/subtitulo-parrafo-2.component';
 
 @Component({
   selector: 'app-inicio',
@@ -23,6 +24,7 @@ import { BannerContenido2Component } from 'src/app/layout/componentes/banner-con
     Feature2Component,
     Services2Component,
     BannerContenido2Component,
+    SubtituloParrafo2Component,
   ],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css',
