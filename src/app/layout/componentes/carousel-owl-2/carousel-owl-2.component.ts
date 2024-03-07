@@ -32,13 +32,13 @@ export class CarouselOwl2Component {
         items: 1,
       },
       400: {
-        items: 1,
-      },
-      740: {
         items: 2,
       },
-      940: {
+      740: {
         items: 3,
+      },
+      940: {
+        items: 4,
       },
     },
     nav: true,
