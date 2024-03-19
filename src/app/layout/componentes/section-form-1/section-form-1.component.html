@@ -1,15 +1,29 @@
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<hr class="border-1 border-gray-500 my-10" />
+<div class="grid grid-cols-1 sm:grid-cols-12 gap-4 my-14">
   <!-- Columna 1 -->
-  <div class="bg-gray-200 p-4">Columna 1</div>
+  <div class="sm:col-span-4 p-4">
+    <h2
+      class="text-5xl text-gray-700 font-semibold mb-4 leading-tight font-subtitulo border-b-8 inline border-yellow-400"
+    >
+      CONTÁCTE CON NOSOTROS
+    </h2>
+    <p
+      class="mb-2 font-parrafo text-gray-800 text-lg sm:text-2xl mt-10 text-justify"
+    >
+      Contáctanos y nos comunicaremos contigo a la brevedad para absolver todas
+      tus dudas. Estamos para asesorarte.
+    </p>
+    <img src="assets/images/img_contact.png" class="" alt="" />
+  </div>
 
   <!-- Columna 2 -->
-  <div class="bg-gray-300 p-4">
-    <form class="max-w-sm mx-auto">
+  <div class="sm:col-span-8 px-24">
+    <form class="mx-auto mx-10">
       <div class="mb-5">
         <input
           type="text"
           id="email"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          class="bg-[#f3f3f3] p-5 text-gray-500 text-xl block w-full p-2.5 dark:placeholder-gray-400 border-white dark:text-white"
           placeholder="NOMBRE COMPLETO"
           required
         />
@@ -18,7 +32,7 @@
         <input
           type="email"
           id="email"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          class="bg-[#f3f3f3] p-5 text-gray-500 text-xl block w-full p-2.5 dark:placeholder-gray-400 border-white dark:text-white"
           placeholder="CORREO ELECTRÓNICO"
           required
         />
@@ -27,7 +41,7 @@
         <input
           type="text"
           id="email"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          class="bg-[#f3f3f3] p-5 text-gray-500 text-xl block w-full p-2.5 dark:placeholder-gray-400 border-white dark:text-white"
           placeholder="TELÉFONO"
           required
         />
@@ -36,32 +50,24 @@
         <input
           type="text"
           id="email"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          class="bg-[#f3f3f3] p-5 text-gray-500 text-xl block w-full p-2.5 dark:placeholder-gray-400 border-white dark:text-white"
           placeholder="ASUNTO"
           required
         />
       </div>
-      <div class="flex items-start mb-5">
-        <div class="flex items-center h-5">
-          <input
-            id="remember"
-            type="checkbox"
-            value=""
-            class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
-            required
-          />
-        </div>
-        <label
-          for="remember"
-          class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-          >Remember me</label
-        >
+      <div class="mb-5">
+        <textarea
+          id="message"
+          rows="4"
+          class="block p-2.5 w-full text-xl text-gray-500 bg-[#f3f3f3] p-5 dark:placeholder-gray-400 border-white dark:text-white"
+          placeholder="MENSAJE"
+        ></textarea>
       </div>
       <button
         type="submit"
-        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        class="text-white bg-yellow-300 hover:bg-yellow-200 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium text-xl w-full sm:w-auto px-5 py-2.5 text-center"
       >
-        Submit
+        ENVIAR
       </button>
     </form>
   </div>
