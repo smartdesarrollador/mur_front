@@ -21,11 +21,15 @@ module.exports = {
         rojo_claro: "#dea69e",
       },
       fontFamily: {
-        parrafo: ["Montserrat", "sans-serif"],
+        /* parrafo: ["Montserrat", "sans-serif"], */
+        parrafo: ["Ripple", "sans-serif"],
         test_fuente: ["Gloria Hallelujah", "cursive"],
-        subtitulo: ["Cinzel", "serif"],
+        subtitulo: ["Ripple", "sans-serif"],
+        texto: ["Ripple", "sans-serif"],
+        titulo: ["Ripple", "sans-serif"],
+        /* subtitulo: ["Cinzel", "serif"],
         texto: ["Montserrat", "sans-serif"],
-        titulo: ["Cinzel", "serif"],
+        titulo: ["Cinzel", "serif"], */
       },
       backgroundImage: {
         "close-menu": "url('/assets/images/icons/icon-close.svg')",
