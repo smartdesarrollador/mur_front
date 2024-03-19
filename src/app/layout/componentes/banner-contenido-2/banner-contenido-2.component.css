@@ -1,0 +1,5 @@
+.full-width-container {
+  width: 100vw; /* 100% del ancho de la ventana del navegador */
+  margin-left: calc(-50vw + 50%); /* Centra horizontalmente */
+  margin-right: calc(-50vw + 50%); /* Centra horizontalmente */
+}
