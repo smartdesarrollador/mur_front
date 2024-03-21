@@ -1,63 +1,269 @@
-<!-- component -->
-<div class="flex items-center justify-center mt-16">
-  <div
-    class="relative flex w-full max-w-[100%] mb-10 flex-row rounded-xl bg-white bg-clip-border text-gray-700"
+<div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+  <ul
+    class="flex flex-wrap justify-around -mb-px text-xl font-medium text-center"
+    id="default-tab"
+    data-tabs-toggle="#default-tab-content"
+    role="tablist"
   >
-    <div
-      class="hidden sm:inline-block relative m-0 w-2/5 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700"
-    >
-      <img src="assets/images/imagen-card.png" alt="image" class="w-[90%]" />
-    </div>
-    <div class="p-10 sm:p-20">
-      <img
-        src="assets/images/imagen-card.png"
-        alt="image"
-        class="sm:hidden w-full rounded-md mb-5"
-      />
-      <h2
-        class="mb-2 block font-sans text-4xl font-subtitulo font-semibold leading-snug tracking-normal text-blue-gray-600 antialiased"
+    <li class="me-2" role="presentation">
+      <button
+        class="inline-block p-4 border-b-2 border-yellow-300 rounded-t-lg hover:border-yellow-400 focus:text-[#495464]"
+        id="profile-tab"
+        data-tabs-target="#profile"
+        type="button"
+        role="tab"
+        aria-controls="profile"
+        aria-selected="false"
       >
-        ENRIQUE FIGUEROA
-      </h2>
+        SOCIOS
+      </button>
+    </li>
+    <li class="me-2" role="presentation">
+      <button
+        class="inline-block p-4 border-b-2 border-yellow-300 rounded-t-lg hover:text-gray-600 hover:border-yellow-400 focus:text-[#495464] dark:hover:text-gray-300"
+        id="dashboard-tab"
+        data-tabs-target="#dashboard"
+        type="button"
+        role="tab"
+        aria-controls="dashboard"
+        aria-selected="false"
+      >
+        CONSULTORES
+      </button>
+    </li>
+    <li class="me-2" role="presentation">
+      <button
+        class="inline-block p-4 border-b-2 border-yellow-300 rounded-t-lg hover:text-gray-600 hover:border-yellow-400 focus:text-[#495464] dark:hover:text-gray-300"
+        id="settings-tab"
+        data-tabs-target="#settings"
+        type="button"
+        role="tab"
+        aria-controls="settings"
+        aria-selected="false"
+      >
+        ASOCIADOS
+      </button>
+    </li>
+  </ul>
+</div>
+<div id="default-tab-content">
+  <div
+    class="hidden p-4 rounded-lg"
+    id="profile"
+    role="tabpanel"
+    aria-labelledby="profile-tab"
+  >
+    <div class="flex items-center justify-center mt-16">
+      <div
+        class="relative flex w-full max-w-[100%] mb-10 flex-row rounded-xl bg-white bg-clip-border text-gray-700"
+      >
+        <div
+          class="hidden sm:inline-block relative m-0 w-2/5 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700"
+        >
+          <img
+            src="assets/images/imagen-card.png"
+            alt="image"
+            class="w-[90%]"
+          />
+        </div>
+        <div class="p-10 sm:p-20">
+          <img
+            src="assets/images/imagen-card.png"
+            alt="image"
+            class="sm:hidden w-full rounded-md mb-5"
+          />
+          <h2
+            class="mb-2 block font-sans text-4xl font-subtitulo font-semibold leading-snug tracking-normal text-blue-gray-600 antialiased"
+          >
+            ENRIQUE FIGUEROA
+          </h2>
 
-      <p
-        class="mb-8 block font-sans text-xl font-normal leading-relaxed text-gray-500 antialiased"
-      >
-        Enrique Figueroa es socio líder del aréa de Litigios y Controversias,
-        cuenta con amplia experiencia profesional en el diseño de estrategias
-        procesales y en el patrocinio de empresas en procesos civiles,
-        contenciosos administrativos, comerciales, constitucionales, procesos de
-        familia, arbitrajes y en la recuperación de créditos y bienes muebles e
-        inmuebles.
-      </p>
-      <p
-        class="mb-8 block font-sans text-xl font-normal leading-relaxed text-gray-500 antialiased"
-      >
-        Abogado por la Universidad Nacional Mayor de San Marcos (UNMSM) y
-        Magíster en Administración y Gestión Pública por la Universidad Castilla
-        de la Mancha. Cuenta con estudios de especialización en Arbitraje
-        Internacional e Inversiones en la Universidad del Pacífico y en
-        Argumentación Jurídica en el Centro de Estudios Constitucionales del
-        Tribunal Constitucional
-      </p>
-      <p
-        class="mb-8 block font-sans text-xl font-normal leading-relaxed text-gray-500 antialiased"
-      >
-        Con anterioridad a su incorporación al Estudio, ha sido asociado senior
-        del área de litigios de Payet, Rey, Cauvi & Pérez Abogados y asociado de
-        la misma área en CMS Grau Abogados. También ha sido profesor adjunto del
-        curso de Derecho Procesal Civil en la Facultad de Derecho de la
-        Universidad de Piura (UDEP) y adjunto de docencia del curso de Derechos
-        Reales en la Facultad de Derecho de la UNMSM
-      </p>
-      <p
-        class="mb-8 block font-sans text-xl font-normal leading-relaxed text-gray-500 antialiased"
-      >
-        Ha asesorado al entidades bancarias, mineras, centros comerciales,
-        compañías de telecomunicación, inmobiliarias, agroindustrias, entre
-        otras empresas.
-      </p>
+          <p
+            class="mb-8 block font-sans text-xl font-normal leading-relaxed text-gray-500 antialiased"
+          >
+            Enrique Figueroa es socio líder del aréa de Litigios y
+            Controversias, cuenta con amplia experiencia profesional en el
+            diseño de estrategias procesales y en el patrocinio de empresas en
+            procesos civiles, contenciosos administrativos, comerciales,
+            constitucionales, procesos de familia, arbitrajes y en la
+            recuperación de créditos y bienes muebles e inmuebles.
+          </p>
+          <p
+            class="mb-8 block font-sans text-xl font-normal leading-relaxed text-gray-500 antialiased"
+          >
+            Abogado por la Universidad Nacional Mayor de San Marcos (UNMSM) y
+            Magíster en Administración y Gestión Pública por la Universidad
+            Castilla de la Mancha. Cuenta con estudios de especialización en
+            Arbitraje Internacional e Inversiones en la Universidad del Pacífico
+            y en Argumentación Jurídica en el Centro de Estudios
+            Constitucionales del Tribunal Constitucional
+          </p>
+          <p
+            class="mb-8 block font-sans text-xl font-normal leading-relaxed text-gray-500 antialiased"
+          >
+            Con anterioridad a su incorporación al Estudio, ha sido asociado
+            senior del área de litigios de Payet, Rey, Cauvi & Pérez Abogados y
+            asociado de la misma área en CMS Grau Abogados. También ha sido
+            profesor adjunto del curso de Derecho Procesal Civil en la Facultad
+            de Derecho de la Universidad de Piura (UDEP) y adjunto de docencia
+            del curso de Derechos Reales en la Facultad de Derecho de la UNMSM
+          </p>
+          <p
+            class="mb-8 block font-sans text-xl font-normal leading-relaxed text-gray-500 antialiased"
+          >
+            Ha asesorado al entidades bancarias, mineras, centros comerciales,
+            compañías de telecomunicación, inmobiliarias, agroindustrias, entre
+            otras empresas.
+          </p>
+        </div>
+      </div>
+      <!-- stylesheet -->
     </div>
   </div>
-  <!-- stylesheet -->
+  <div
+    class="hidden p-4 rounded-lg"
+    id="dashboard"
+    role="tabpanel"
+    aria-labelledby="dashboard-tab"
+  >
+    <div class="flex items-center justify-center mt-16">
+      <div
+        class="relative flex w-full max-w-[100%] mb-10 flex-row rounded-xl bg-white bg-clip-border text-gray-700"
+      >
+        <div
+          class="hidden sm:inline-block relative m-0 w-2/5 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700"
+        >
+          <img
+            src="assets/images/imagen-card.png"
+            alt="image"
+            class="w-[90%]"
+          />
+        </div>
+        <div class="p-10 sm:p-20">
+          <img
+            src="assets/images/imagen-card.png"
+            alt="image"
+            class="sm:hidden w-full rounded-md mb-5"
+          />
+          <h2
+            class="mb-2 block font-sans text-4xl font-subtitulo font-semibold leading-snug tracking-normal text-blue-gray-600 antialiased"
+          >
+            JUAN DOMINGUEZ
+          </h2>
+
+          <p
+            class="mb-8 block font-sans text-xl font-normal leading-relaxed text-gray-500 antialiased"
+          >
+            Juan Dominguez es socio líder del aréa de Litigios y Controversias,
+            cuenta con amplia experiencia profesional en el diseño de
+            estrategias procesales y en el patrocinio de empresas en procesos
+            civiles, contenciosos administrativos, comerciales,
+            constitucionales, procesos de familia, arbitrajes y en la
+            recuperación de créditos y bienes muebles e inmuebles.
+          </p>
+          <p
+            class="mb-8 block font-sans text-xl font-normal leading-relaxed text-gray-500 antialiased"
+          >
+            Abogado por la Universidad Nacional Mayor de San Marcos (UNMSM) y
+            Magíster en Administración y Gestión Pública por la Universidad
+            Castilla de la Mancha. Cuenta con estudios de especialización en
+            Arbitraje Internacional e Inversiones en la Universidad del Pacífico
+            y en Argumentación Jurídica en el Centro de Estudios
+            Constitucionales del Tribunal Constitucional
+          </p>
+          <p
+            class="mb-8 block font-sans text-xl font-normal leading-relaxed text-gray-500 antialiased"
+          >
+            Con anterioridad a su incorporación al Estudio, ha sido asociado
+            senior del área de litigios de Payet, Rey, Cauvi & Pérez Abogados y
+            asociado de la misma área en CMS Grau Abogados. También ha sido
+            profesor adjunto del curso de Derecho Procesal Civil en la Facultad
+            de Derecho de la Universidad de Piura (UDEP) y adjunto de docencia
+            del curso de Derechos Reales en la Facultad de Derecho de la UNMSM
+          </p>
+          <p
+            class="mb-8 block font-sans text-xl font-normal leading-relaxed text-gray-500 antialiased"
+          >
+            Ha asesorado al entidades bancarias, mineras, centros comerciales,
+            compañías de telecomunicación, inmobiliarias, agroindustrias, entre
+            otras empresas.
+          </p>
+        </div>
+      </div>
+      <!-- stylesheet -->
+    </div>
+  </div>
+  <div
+    class="hidden p-4 rounded-lg"
+    id="settings"
+    role="tabpanel"
+    aria-labelledby="settings-tab"
+  >
+    <div class="flex items-center justify-center mt-16">
+      <div
+        class="relative flex w-full max-w-[100%] mb-10 flex-row rounded-xl bg-white bg-clip-border text-gray-700"
+      >
+        <div
+          class="hidden sm:inline-block relative m-0 w-2/5 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700"
+        >
+          <img
+            src="assets/images/imagen-card.png"
+            alt="image"
+            class="w-[90%]"
+          />
+        </div>
+        <div class="p-10 sm:p-20">
+          <img
+            src="assets/images/imagen-card.png"
+            alt="image"
+            class="sm:hidden w-full rounded-md mb-5"
+          />
+          <h2
+            class="mb-2 block font-sans text-4xl font-subtitulo font-semibold leading-snug tracking-normal text-blue-gray-600 antialiased"
+          >
+            LUCHO GUTIERREZ
+          </h2>
+
+          <p
+            class="mb-8 block font-sans text-xl font-normal leading-relaxed text-gray-500 antialiased"
+          >
+            Lucho Gutierrez es socio líder del aréa de Litigios y Controversias,
+            cuenta con amplia experiencia profesional en el diseño de
+            estrategias procesales y en el patrocinio de empresas en procesos
+            civiles, contenciosos administrativos, comerciales,
+            constitucionales, procesos de familia, arbitrajes y en la
+            recuperación de créditos y bienes muebles e inmuebles.
+          </p>
+          <p
+            class="mb-8 block font-sans text-xl font-normal leading-relaxed text-gray-500 antialiased"
+          >
+            Abogado por la Universidad Nacional Mayor de San Marcos (UNMSM) y
+            Magíster en Administración y Gestión Pública por la Universidad
+            Castilla de la Mancha. Cuenta con estudios de especialización en
+            Arbitraje Internacional e Inversiones en la Universidad del Pacífico
+            y en Argumentación Jurídica en el Centro de Estudios
+            Constitucionales del Tribunal Constitucional
+          </p>
+          <p
+            class="mb-8 block font-sans text-xl font-normal leading-relaxed text-gray-500 antialiased"
+          >
+            Con anterioridad a su incorporación al Estudio, ha sido asociado
+            senior del área de litigios de Payet, Rey, Cauvi & Pérez Abogados y
+            asociado de la misma área en CMS Grau Abogados. También ha sido
+            profesor adjunto del curso de Derecho Procesal Civil en la Facultad
+            de Derecho de la Universidad de Piura (UDEP) y adjunto de docencia
+            del curso de Derechos Reales en la Facultad de Derecho de la UNMSM
+          </p>
+          <p
+            class="mb-8 block font-sans text-xl font-normal leading-relaxed text-gray-500 antialiased"
+          >
+            Ha asesorado al entidades bancarias, mineras, centros comerciales,
+            compañías de telecomunicación, inmobiliarias, agroindustrias, entre
+            otras empresas.
+          </p>
+        </div>
+      </div>
+      <!-- stylesheet -->
+    </div>
+  </div>
 </div>
