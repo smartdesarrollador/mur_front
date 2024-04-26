@@ -22,11 +22,17 @@ module.exports = {
       },
       fontFamily: {
         /* parrafo: ["Montserrat", "sans-serif"], */
-        parrafo: ["Ripple", "sans-serif"],
+        /* parrafo: ["Ripple", "sans-serif"],
         test_fuente: ["Gloria Hallelujah", "cursive"],
         subtitulo: ["Ripple", "sans-serif"],
         texto: ["Ripple", "sans-serif"],
-        titulo: ["Ripple", "sans-serif"],
+        titulo: ["Ripple", "sans-serif"], */
+        parrafo: ["FraktionSans", "sans-serif"],
+        test_fuente: ["Gloria Hallelujah", "cursive"],
+        subtitulo: ["FraktionSans", "sans-serif"],
+        texto: ["FraktionSans", "sans-serif"],
+        titulo: ["FraktionSans", "sans-serif"],
+
         /* subtitulo: ["Cinzel", "serif"],
         texto: ["Montserrat", "sans-serif"],
         titulo: ["Cinzel", "serif"], */

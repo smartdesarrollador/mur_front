@@ -8,8 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './header-2.component.css',
 })
 export class Header2Component {
-  direccion: string =
-    'Los Naranjos 283 San Isidro Municipalidad Metropolitana de Lima';
-  telefono: string = '(01) 4219197';
+  direccion: string = 'Av. Victor Andrés Belaúnde 280 Of. 701-A, San Isidro';
+  telefono: string = '(923)678-637 ';
   horario: string = 'Lunes - Viernes (06:00 hts - 20:00 hrs)';
 }
