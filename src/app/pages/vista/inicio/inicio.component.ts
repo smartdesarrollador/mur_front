@@ -11,6 +11,7 @@ import { BannerContenido1Component } from 'src/app/layout/componentes/banner-con
 import { BannerContenido2Component } from 'src/app/layout/componentes/banner-contenido-2/banner-contenido-2.component';
 import { SubtituloParrafo2Component } from 'src/app/layout/componentes/subtitulo-parrafo-2/subtitulo-parrafo-2.component';
 import { SectionForm1Component } from 'src/app/layout/componentes/section-form-1/section-form-1.component';
+import { ListImagesComponent } from 'src/app/layout/componentes/list-images/list-images.component';
 
 @Component({
   selector: 'app-inicio',
@@ -27,6 +28,7 @@ import { SectionForm1Component } from 'src/app/layout/componentes/section-form-1
     BannerContenido2Component,
     SubtituloParrafo2Component,
     SectionForm1Component,
+    ListImagesComponent,
   ],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css',
