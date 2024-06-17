@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { initFlowbite } from 'flowbite';
 
 @Component({
   selector: 'app-navbar-dropdown',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './navbar-dropdown.component.html',
   styleUrl: './navbar-dropdown.component.css',
 })

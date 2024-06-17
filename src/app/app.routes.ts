@@ -7,6 +7,7 @@ import { AdminComponent } from './pages/admin/admin.component';
 import { VistaComponent } from './pages/vista/vista.component';
 import { InicioComponent } from './pages/vista/inicio/inicio.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
+import { NuestroEquipoComponent } from './pages/vista/nuestro-equipo/nuestro-equipo.component';
 
 import { AdminGuard } from './guards/admin.guard';
 import { EmpleadorGuard } from './guards/empleador.guard';
@@ -116,6 +117,10 @@ export const routes: Routes = [
       {
         path: '',
         component: InicioComponent,
+      },
+      {
+        path: 'nuestro-equipo',
+        component: NuestroEquipoComponent,
       },
     ],
   },

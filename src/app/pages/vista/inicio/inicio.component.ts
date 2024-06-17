@@ -29,6 +29,7 @@ import { ListImagesComponent } from 'src/app/layout/componentes/list-images/list
     SubtituloParrafo2Component,
     SectionForm1Component,
     ListImagesComponent,
+    BannerContenido1Component,
   ],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css',
