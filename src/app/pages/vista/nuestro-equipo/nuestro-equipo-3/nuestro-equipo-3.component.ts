@@ -4,13 +4,13 @@ import { initFlowbite } from 'flowbite';
 import { BannerContenido3Component } from 'src/app/layout/componentes/banner-contenido-3/banner-contenido-3.component';
 
 @Component({
-  selector: 'app-nuestro-equipo',
+  selector: 'app-nuestro-equipo-3',
   standalone: true,
   imports: [RouterLink, BannerContenido3Component],
-  templateUrl: './nuestro-equipo.component.html',
-  styleUrl: './nuestro-equipo.component.css',
+  templateUrl: './nuestro-equipo-3.component.html',
+  styleUrl: './nuestro-equipo-3.component.css',
 })
-export class NuestroEquipoComponent implements OnInit {
+export class NuestroEquipo3Component implements OnInit {
   ngOnInit(): void {
     initFlowbite();
   }

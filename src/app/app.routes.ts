@@ -92,6 +92,10 @@ import { LayoutDosComponent } from './layout/layout-dos/layout-dos.component';
 import { LayoutComponent } from './layout/layout.component';
 import { LayoutTresComponent } from './layout/layout-tres/layout-tres.component';
 import { FirmaComponent } from './pages/vista/firma/firma.component';
+import { NuestroEquipo2Component } from './pages/vista/nuestro-equipo/nuestro-equipo-2/nuestro-equipo-2.component';
+import { NuestroEquipo3Component } from './pages/vista/nuestro-equipo/nuestro-equipo-3/nuestro-equipo-3.component';
+import { NuestroEquipo4Component } from './pages/vista/nuestro-equipo/nuestro-equipo-4/nuestro-equipo-4.component';
+import { NuestroEquipo5Component } from './pages/vista/nuestro-equipo/nuestro-equipo-5/nuestro-equipo-5.component';
 
 export const routes: Routes = [
   {
@@ -122,6 +126,22 @@ export const routes: Routes = [
       {
         path: 'nuestro-equipo',
         component: NuestroEquipoComponent,
+      },
+      {
+        path: 'nuestro-equipo-2',
+        component: NuestroEquipo2Component,
+      },
+      {
+        path: 'nuestro-equipo-3',
+        component: NuestroEquipo3Component,
+      },
+      {
+        path: 'nuestro-equipo-4',
+        component: NuestroEquipo4Component,
+      },
+      {
+        path: 'nuestro-equipo-5',
+        component: NuestroEquipo5Component,
       },
       {
         path: 'firma',
