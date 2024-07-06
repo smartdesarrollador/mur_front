@@ -1,17 +1,30 @@
-<section
-  class="bg-cover h-[400px] sm:h-screen bg-center bg-no-repeat bg-[url('assets/images/banner.jpg')] bg-gray-700"
->
-  <div class="px-10 max-w-[100%] md:max-w-[100%] text-center py-24 lg:py-80">
-    <h3
-      class="mb-10 text-3xl sm:text-4xl leading-none font-subtitulo text-white md:text-4xl lg:text-7xl"
+<owl-carousel-o [options]="customOptions">
+  <ng-template *ngFor="let item of listBanners" carouselSlide>
+    <section
+      class="bg-cover h-[400px] sm:h-screen bg-center bg-no-repeat bg-gray-700"
+      [ngStyle]="{ 'background-image': 'url(' + urlRaiz + item.url + ')' }"
     >
-      Líderes en soluciones legales
-    </h3>
+      <div
+        class="px-10 max-w-[100%] md:max-w-[100%] text-center py-24 lg:py-80"
+      >
+        <h3
+          class="mb-10 text-3xl sm:text-4xl leading-none font-subtitulo text-white md:text-4xl lg:text-7xl"
+        >
+          Líderes en soluciones legales
+        </h3>
 
-    <h3
-      class="sm:my-10 bg-black inline bg-opacity-50 p-1 text-sm sm:text-lg font-parrafo leading-none text-white md:text-3xl lg:text-5xl"
-    >
-      Creatividad, innovación y excelencia.
-    </h3>
-  </div>
-</section>
+        <h3
+          class="sm:my-10 bg-black inline bg-opacity-50 p-1 text-sm sm:text-lg font-parrafo leading-none text-white md:text-3xl lg:text-5xl"
+        >
+          Creatividad, innovación y excelencia.
+        </h3>
+      </div>
+    </section>
+  </ng-template>
+</owl-carousel-o>
+
+<!-- <owl-carousel-o [options]="customOptions">
+  <ng-template *ngFor="let item of listBanners" carouselSlide
+    ><img src="{{ urlRaiz + item.url }}" class="" alt="..."
+  /></ng-template>
+</owl-carousel-o> -->

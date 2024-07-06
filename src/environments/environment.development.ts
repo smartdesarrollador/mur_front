@@ -1,5 +1,6 @@
 export const environment = {
   production: true,
+  urlRaiz: 'http://127.0.0.1:8000',
   apiUrl: 'http://127.0.0.1:8000/api/test_api_crud',
   apiUrl2: 'http://127.0.0.1:8000/api/test_api',
   apiUrl3: 'http://127.0.0.1:8000/api/file',
@@ -11,4 +12,12 @@ export const environment = {
   apiUrlUltimoEmpleador: 'http://127.0.0.1:8000/api/ultimo_empleador',
   apiUrlActividadUltimoEmpleador:
     'http://127.0.0.1:8000/api/actividad_ultimo_empleador',
+  apiUpdateFile: 'http://127.0.0.1:8000/api/update/upload',
+  apiListarFiles: 'http://127.0.0.1:8000/api/listar/files',
+  apiDeleteFile: 'http://127.0.0.1:8000/api/update/upload',
+  apiUrl3Carousel: 'http://127.0.0.1:8000/api/carousel/upload',
+  apiUpdateFileCarousel: 'http://127.0.0.1:8000/api/carousel/update/upload',
+  apiListarFilesCarousel: 'http://127.0.0.1:8000/api/carousel/listar/files',
+  apiDeleteFileCarousel: 'http://127.0.0.1:8000/api/carousel/update/upload',
+  apiListarFilesTestimonio: 'http://127.0.0.1:8000/api/testimonios',
 };

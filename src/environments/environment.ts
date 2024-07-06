@@ -1,5 +1,6 @@
 export const environment = {
   production: true,
+  urlRaiz: 'https://apimur.amorinomoda.com',
   apiUrl: 'https://apimur.amorinomoda.com/api/test_api_crud',
   apiUrl2: 'https://apimur.amorinomoda.com/api/test_api',
   apiUrl3: 'https://apimur.amorinomoda.com/api/file',
@@ -11,6 +12,17 @@ export const environment = {
   apiUrlUltimoEmpleador: 'https://apimur.amorinomoda.com/api/ultimo_empleador',
   apiUrlActividadUltimoEmpleador:
     'https://apimur.amorinomoda.com/api/actividad_ultimo_empleador',
+  apiUpdateFile: 'https://apimur.amorinomoda.com/api/update/upload',
+  apiListarFiles: 'https://apimur.amorinomoda.com/api/listar/files',
+  apiDeleteFile: 'https://apimur.amorinomoda.com/api/update/upload',
+  apiUrl3Carousel: 'https://apimur.amorinomoda.com/api/carousel/upload',
+  apiUpdateFileCarousel:
+    'https://apimur.amorinomoda.com/api/carousel/update/upload',
+  apiListarFilesCarousel:
+    'https://apimur.amorinomoda.com/api/carousel/listar/files',
+  apiDeleteFileCarousel:
+    'https://apimur.amorinomoda.com/api/carousel/update/upload',
+  apiListarFilesTestimonio: 'https://apimur.amorinomoda.com/api/testimonios',
 };
 
 /* export const environment = {

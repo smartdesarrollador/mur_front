@@ -1,4 +1,30 @@
 <owl-carousel-o [options]="customOptions">
+  <ng-template *ngFor="let item of listBanners" carouselSlide>
+    <div class="w-full px-4 md:px-12 mb-5">
+      <div class="flex flex-col justify-center">
+        <div
+          class="group h-96 md:h-[400px] mb-10 w-full md:w-[300px] [perspective:1000px]"
+        >
+          <div
+            class="relative h-full w-full rounded-xl transition-all duration-500"
+          >
+            <div class="absolute inset-0">
+              <img
+                class="h-full w-full rounded-xl object-cover"
+                src="{{ urlRaiz + item.url_carousel }}"
+              />
+              <h3 class="text-center text-lg sm:text-3xl">
+                {{ item.nombre_socio }}
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</owl-carousel-o>
+
+<!-- <owl-carousel-o [options]="customOptions">
   <ng-template carouselSlide>
     <div class="w-full px-4 md:px-12 mb-5">
       <div class="flex flex-col justify-center">
@@ -315,4 +341,4 @@
       </div>
     </div>
   </ng-template>
-</owl-carousel-o>
+</owl-carousel-o> -->
