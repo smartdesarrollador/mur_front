@@ -20,4 +20,12 @@ export const environment = {
   apiListarFilesCarousel: 'http://127.0.0.1:8000/api/carousel/listar/files',
   apiDeleteFileCarousel: 'http://127.0.0.1:8000/api/carousel/update/upload',
   apiListarFilesTestimonio: 'http://127.0.0.1:8000/api/testimonios',
+  apiListarFilesProducto: 'http://127.0.0.1:8000/api/productos',
+  apiListarCursosProducto: 'http://127.0.0.1:8000/api/productos/cursos',
+  apiListarEspecialidadesProducto:
+    'http://127.0.0.1:8000/api/productos/especialidades',
+  apiListarDestacadosProducto: 'http://127.0.0.1:8000/api/productos/destacados',
+  apiUrl3Producto: 'http://127.0.0.1:8000/api/productos/subir',
+  apiUpdateFileProducto: 'http://127.0.0.1:8000/api/productos/update',
+  apiDeleteFileProducto: 'http://127.0.0.1:8000/api/productos',
 };

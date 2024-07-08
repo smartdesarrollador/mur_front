@@ -20,7 +20,7 @@
       <!-- Primera columna con imagen -->
       <div class="border col-span-1 md:col-span-2 border-solid border-gray-300">
         <img
-          src="assets/images/nuestro-equipo/socio_13.jpg"
+          src="{{ urlRaiz + ruta_imagen[12] }}"
           alt="Imagen"
           class="w-full h-full object-cover"
         />
@@ -29,12 +29,92 @@
       <div
         class="space-y-4 border col-span-1 md:col-span-3 border-solid border-gray-300 p-16"
       >
-        <h1 class="text-2xl font-parrafo font-bold mb-2">Gina Pineda</h1>
+        <h1 class="text-2xl font-parrafo font-bold mb-2">{{ nombre[12] }}</h1>
         <p class="font-parrafo text-gray-800 text-lg sm:text-2xl text-justify">
-          Bachiller en Derecho con conocimientos en derecho administrativo y
-          compliance. Cuenta con experiencia laboral en el sector público en
-          entidades como Mininter, Banco de la Nación y Sutran; así como en el
-          sector privado en estudios de abogados.
+          {{ resumen[12] }}
+        </p>
+        <p>
+          <a
+            class="cursor-pointer font-parrafo text-yellow-400 text-lg sm:text-2xl"
+            data-modal-target="default-modal_12"
+            data-modal-toggle="default-modal_12"
+            >Leer más</a
+          >
+        </p>
+      </div>
+      <!-- Tercera columna con lista -->
+      <div
+        class="border col-span-1 md:col-span-2 border-solid border-gray-300 p-10 bg-gray-600"
+      >
+        <div class="flex items-center justify-center h-full">
+          <ul class="space-y-4 font-parrafo text-white text-lg sm:text-2xl">
+            <li>
+              <img
+                class="h-12 inline"
+                src="assets/images/iconos/correo.png"
+                alt=""
+              />
+              {{ correo[12] }}
+            </li>
+            <li>
+              <img
+                class="h-12 inline"
+                src="assets/images/iconos/celular.png"
+                alt=""
+              />
+              {{ telefono[12] }}
+            </li>
+            <li>
+              <img
+                class="h-12 inline"
+                src="assets/images/iconos/descarga.png"
+                alt=""
+              />
+              Descargar C.V
+            </li>
+            <li>
+              <img
+                class="h-12 inline"
+                src="assets/images/iconos/medalla.png"
+                alt=""
+              />
+              Logros:
+            </li>
+            <li>
+              <img
+                class="h-20 inline ml-10 mr-4"
+                src="assets/images/iconos/logro.png"
+                alt=""
+              />
+              <img
+                class="h-20 inline"
+                src="assets/images/iconos/logro.png"
+                alt=""
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="grid grid-cols-1 md:grid-cols-7 gap-0 border border-solid border-gray-300 my-14"
+    >
+      <!-- Primera columna con imagen -->
+      <div class="border col-span-1 md:col-span-2 border-solid border-gray-300">
+        <img
+          src="{{ urlRaiz + ruta_imagen[13] }}"
+          alt="Imagen"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <!-- Segunda columna con título y descripción -->
+      <div
+        class="space-y-4 border col-span-1 md:col-span-3 border-solid border-gray-300 p-16"
+      >
+        <h1 class="text-2xl font-parrafo font-bold mb-2">{{ nombre[13] }}</h1>
+        <p class="font-parrafo text-gray-800 text-lg sm:text-2xl text-justify">
+          {{ resumen[13] }}
         </p>
         <p>
           <a
@@ -57,7 +137,7 @@
                 src="assets/images/iconos/correo.png"
                 alt=""
               />
-              gpineda&#64;evv.pe
+              {{ correo[13] }}
             </li>
             <li>
               <img
@@ -65,7 +145,7 @@
                 src="assets/images/iconos/celular.png"
                 alt=""
               />
-              973 272 188
+              {{ telefono[13] }}
             </li>
             <li>
               <img
@@ -106,7 +186,7 @@
       <!-- Primera columna con imagen -->
       <div class="border col-span-1 md:col-span-2 border-solid border-gray-300">
         <img
-          src="assets/images/nuestro-equipo/socio_14.jpg"
+          src="{{ urlRaiz + ruta_imagen[14] }}"
           alt="Imagen"
           class="w-full h-full object-cover"
         />
@@ -115,12 +195,9 @@
       <div
         class="space-y-4 border col-span-1 md:col-span-3 border-solid border-gray-300 p-16"
       >
-        <h1 class="text-2xl font-parrafo font-bold mb-2">José Raunelli</h1>
+        <h1 class="text-2xl font-parrafo font-bold mb-2">{{ nombre[14] }}</h1>
         <p class="font-parrafo text-gray-800 text-lg sm:text-2xl text-justify">
-          José Raunelli ha brindado servicios contractuales, societarios y sobre
-          regulación financiera a distantes empresas nacionales e
-          internacionales, destacando empresas de la industria financiera,
-          educación, tecnología, fintech y telecomunicaciones.
+          {{ resumen[14] }}
         </p>
         <p>
           <a
@@ -143,7 +220,7 @@
                 src="assets/images/iconos/correo.png"
                 alt=""
               />
-              jraunelli&#64;evv.pe
+              {{ correo[14] }}
             </li>
             <li>
               <img
@@ -151,94 +228,7 @@
                 src="assets/images/iconos/celular.png"
                 alt=""
               />
-              949253530
-            </li>
-            <li>
-              <img
-                class="h-12 inline"
-                src="assets/images/iconos/descarga.png"
-                alt=""
-              />
-              Descargar C.V
-            </li>
-            <li>
-              <img
-                class="h-12 inline"
-                src="assets/images/iconos/medalla.png"
-                alt=""
-              />
-              Logros:
-            </li>
-            <li>
-              <img
-                class="h-20 inline ml-10 mr-4"
-                src="assets/images/iconos/logro.png"
-                alt=""
-              />
-              <img
-                class="h-20 inline"
-                src="assets/images/iconos/logro.png"
-                alt=""
-              />
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div
-      class="grid grid-cols-1 md:grid-cols-7 gap-0 border border-solid border-gray-300 my-14"
-    >
-      <!-- Primera columna con imagen -->
-      <div class="border col-span-1 md:col-span-2 border-solid border-gray-300">
-        <img
-          src="assets/images/nuestro-equipo/socio_15.jpg"
-          alt="Imagen"
-          class="w-full h-full object-cover"
-        />
-      </div>
-      <!-- Segunda columna con título y descripción -->
-      <div
-        class="space-y-4 border col-span-1 md:col-span-3 border-solid border-gray-300 p-16"
-      >
-        <h1 class="text-2xl font-parrafo font-bold mb-2">Ximena Márquez</h1>
-        <p class="font-parrafo text-gray-800 text-lg sm:text-2xl text-justify">
-          Bachiller en Derecho por la Universidad de Piura con experiencia en la
-          rama Laboral, Administrativa, Procesal y Regulatoria. Posee una sólida
-          capacidad de aprendizaje y aplicación de conocimientos en el ámbito
-          profesional, además de una gran disposición para adaptarme a
-          diferentes áreas asignadas.
-        </p>
-        <p>
-          <a
-            class="cursor-pointer font-parrafo text-yellow-400 text-lg sm:text-2xl"
-            data-modal-target="default-modal_15"
-            data-modal-toggle="default-modal_15"
-            >Leer más</a
-          >
-        </p>
-      </div>
-      <!-- Tercera columna con lista -->
-      <div
-        class="border col-span-1 md:col-span-2 border-solid border-gray-300 p-10 bg-gray-600"
-      >
-        <div class="flex items-center justify-center h-full">
-          <ul class="space-y-4 font-parrafo text-white text-lg sm:text-2xl">
-            <li>
-              <img
-                class="h-12 inline"
-                src="assets/images/iconos/correo.png"
-                alt=""
-              />
-              xmarquez&#64;evv.pe
-            </li>
-            <li>
-              <img
-                class="h-12 inline"
-                src="assets/images/iconos/celular.png"
-                alt=""
-              />
-              987828782
+              {{ telefono[14] }}
             </li>
             <li>
               <img
@@ -306,6 +296,194 @@
 
 <!-- Main modal -->
 <div
+  id="default-modal_12"
+  tabindex="-1"
+  aria-hidden="true"
+  class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+>
+  <div class="relative p-4 w-full max-w-6xl max-h-full">
+    <!-- Modal content -->
+    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+      <!-- Modal header -->
+      <div class="flex items-center justify-between p-4 md:p-5 rounded-t">
+        <button
+          type="button"
+          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+          data-modal-hide="default-modal_12"
+        >
+          <svg
+            class="w-3 h-3"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+            />
+          </svg>
+          <span class="sr-only">Close modal</span>
+        </button>
+      </div>
+      <!-- Modal body -->
+      <div class="p-4 md:p-5 space-y-4">
+        <div class="mx-auto p-6">
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+            <!-- Columna de la Imagen -->
+            <div class="md:col-span-2 flex flex-col items-center">
+              <img
+                src="{{ urlRaiz + ruta_imagen[12] }}"
+                alt="Imagen de perfil"
+                class=""
+              />
+              <p class="italic text-center font-parrafo py-5">
+                "Siempre disponible para cualquier consulta y preocupado por
+                obtener el mejor resultado para sus clientes"
+              </p>
+              <div class="flex space-x-4 mt-4">
+                <img
+                  src="assets/images/iconos/logro.png"
+                  alt="Logo 1"
+                  class="w-20 h-20"
+                />
+                <img
+                  src="assets/images/iconos/logro.png"
+                  alt="Logo 2"
+                  class="w-20 h-20"
+                />
+              </div>
+            </div>
+
+            <!-- Columna de Información Personal -->
+            <div class="md:col-span-3 p-10">
+              <h1 class="text-2xl font-titulo font-bold">
+                {{ nombre[12] }}
+              </h1>
+              <p class="text-gray-500">Socio</p>
+              <p class="mt-2 font-parrafo">
+                {{ correo[12] }}
+                <br />+(51) {{ telefono[12] }}
+              </p>
+              <button
+                class="mt-4 bg-yellow-400 text-white px-4 py-2 font-parrafo"
+              >
+                Descargar C.V
+              </button>
+              <hr class="my-4" />
+              <h2 class="text-xl font-bold font-subtitulo">
+                Áreas de Práctica:
+              </h2>
+              <p class="mt-2 font-parrafo">
+                Corporativo / Fusiones y Adquisiciones, Proyectos e
+                Infraestructura, Derecho de Finanzas, Mercado de Capitales,
+                Titulizaciones y Fondos de Inversión
+              </p>
+              <h2 class="text-xl font-bold mt-4 font-subtitulo">
+                Descripción:
+              </h2>
+
+              <div class="mt-2 text-justify font-parrafo">
+                {{ resumen[12] }}
+              </div>
+
+              <!-- Sección de Botones -->
+              <div class="flex flex-col space-y-4 my-10">
+                <button class="bg-yellow-400 text-white px-4 py-2">
+                  Más información +
+                </button>
+                <button class="bg-yellow-400 text-white px-4 py-2">
+                  Publicaciones o noticias -
+                </button>
+              </div>
+
+              <!-- Sección de Noticias -->
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+                <div class="bg-white border overflow-hidden shadow-sm">
+                  <img
+                    src="assets/images/noticias/img_noticia_1.jpg"
+                    alt="Noticia 1"
+                    class="w-full h-32 object-cover"
+                  />
+                  <div class="p-4">
+                    <p class="text-gray-700 text-sm font-parrafo">
+                      Lorem Ipsum es simplemente el texto de relleno de las
+                      imprentas y archivos de texto. Lorem Ipsum ha sido el
+                      texto de relleno estándar de las industrias desde el año
+                      1500, cuando un impresor
+                    </p>
+                    <a href="#" class="text-yellow-400 mt-2 inline-block"
+                      >Ver publicación</a
+                    >
+                  </div>
+                </div>
+                <div class="bg-white border overflow-hidden shadow-sm">
+                  <img
+                    src="assets/images/noticias/img_noticia_2.jpg"
+                    alt="Noticia 2"
+                    class="w-full h-32 object-cover"
+                  />
+                  <div class="p-4">
+                    <p class="text-gray-700 text-sm font-parrafo">
+                      Lorem Ipsum es simplemente el texto de relleno de las
+                      imprentas y archivos de texto. Lorem Ipsum ha sido el
+                      texto de relleno estándar de las industrias desde el año
+                      1500, cuando un impresor
+                    </p>
+                    <a href="#" class="text-yellow-400 mt-2 inline-block"
+                      >Ver publicación</a
+                    >
+                  </div>
+                </div>
+                <div class="bg-white border overflow-hidden shadow-sm">
+                  <img
+                    src="assets/images/noticias/img_noticia_3.jpg"
+                    alt="Noticia 3"
+                    class="w-full h-32 object-cover"
+                  />
+                  <div class="p-4">
+                    <p class="text-gray-700 text-sm font-parrafo">
+                      Lorem Ipsum es simplemente el texto de relleno de las
+                      imprentas y archivos de texto. Lorem Ipsum ha sido el
+                      texto de relleno estándar de las industrias desde el año
+                      1500, cuando un impresor
+                    </p>
+                    <a href="#" class="text-yellow-400 mt-2 inline-block"
+                      >Ver publicación</a
+                    >
+                  </div>
+                </div>
+                <div class="bg-white border overflow-hidden shadow-sm">
+                  <img
+                    src="assets/images/noticias/img_noticia_4.jpg"
+                    alt="Noticia 4"
+                    class="w-full h-32 object-cover"
+                  />
+                  <div class="p-4">
+                    <p class="text-gray-700 text-sm font-parrafo">
+                      Lorem Ipsum es simplemente el texto de relleno de las
+                      imprentas y archivos de texto. Lorem Ipsum ha sido el
+                      texto de relleno estándar de las industrias desde el año
+                      1500, cuando un impresor
+                    </p>
+                    <a href="#" class="text-yellow-400 mt-2 inline-block"
+                      >Ver publicación</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
   id="default-modal_13"
   tabindex="-1"
   aria-hidden="true"
@@ -346,7 +524,7 @@
             <!-- Columna de la Imagen -->
             <div class="md:col-span-2 flex flex-col items-center">
               <img
-                src="assets/images/nuestro-equipo/socio_13.jpg"
+                src="{{ urlRaiz + ruta_imagen[13] }}"
                 alt="Imagen de perfil"
                 class=""
               />
@@ -370,11 +548,13 @@
 
             <!-- Columna de Información Personal -->
             <div class="md:col-span-3 p-10">
-              <h1 class="text-2xl font-titulo font-bold">Gina Pineda</h1>
+              <h1 class="text-2xl font-titulo font-bold">
+                {{ nombre[13] }}
+              </h1>
               <p class="text-gray-500">Socio</p>
               <p class="mt-2 font-parrafo">
-                gpineda&#64;evv.pe
-                <br />+(51) 973 272 188
+                {{ correo[12] }}
+                <br />+(51) {{ telefono[13] }}
               </p>
               <button
                 class="mt-4 bg-yellow-400 text-white px-4 py-2 font-parrafo"
@@ -393,18 +573,10 @@
               <h2 class="text-xl font-bold mt-4 font-subtitulo">
                 Descripción:
               </h2>
-              <p class="mt-2 text-justify font-parrafo">
-                Bachiller en Derecho con conocimientos en derecho administrativo
-                y compliance. Cuenta con experiencia laboral en el sector
-                público en entidades como Mininter, Banco de la Nación y Sutran;
-                así como en el sector privado en estudios de abogados.
-              </p>
-              <p class="mt-2 text-justify font-parrafo">
-                En Valderrama Abogados ha participado en procesos de
-                implementación y reestructuración de SPLAFT, elaboración de
-                Informes de Due Dilligence y reportes de gestión de riesgos de
-                LA/FT.
-              </p>
+
+              <div class="mt-2 text-justify font-parrafo">
+                {{ resumen[13] }}
+              </div>
 
               <!-- Sección de Botones -->
               <div class="flex flex-col space-y-4 my-10">
@@ -540,200 +712,7 @@
             <!-- Columna de la Imagen -->
             <div class="md:col-span-2 flex flex-col items-center">
               <img
-                src="assets/images/nuestro-equipo/socio_14.jpg"
-                alt="Imagen de perfil"
-                class=""
-              />
-              <p class="italic text-center font-parrafo py-5">
-                "Siempre disponible para cualquier consulta y preocupada por
-                obtener el mejor resultado para sus clientes"
-              </p>
-              <div class="flex space-x-4 mt-4">
-                <img
-                  src="assets/images/iconos/logro.png"
-                  alt="Logo 1"
-                  class="w-20 h-20"
-                />
-                <img
-                  src="assets/images/iconos/logro.png"
-                  alt="Logo 2"
-                  class="w-20 h-20"
-                />
-              </div>
-            </div>
-
-            <!-- Columna de Información Personal -->
-            <div class="md:col-span-3 p-10">
-              <h1 class="text-2xl font-titulo font-bold">José Raunelli</h1>
-              <p class="text-gray-500">Socio</p>
-              <p class="mt-2 font-parrafo">
-                jraunelli&#64;evv.pe<br />+51 949253530
-              </p>
-              <button
-                class="mt-4 bg-yellow-400 text-white px-4 py-2 font-parrafo"
-              >
-                Descargar C.V
-              </button>
-              <hr class="my-4" />
-              <h2 class="text-xl font-bold font-subtitulo">
-                Áreas de Práctica:
-              </h2>
-              <p class="mt-2 font-parrafo">
-                Corporativo / Fusiones y Adquisiciones, Proyectos e
-                Infraestructura, Derecho de Finanzas, Mercado de Capitales,
-                Titulizaciones y Fondos de Inversión
-              </p>
-              <h2 class="text-xl font-bold mt-4 font-subtitulo">
-                Descripción:
-              </h2>
-              <p class="mt-2 text-justify font-parrafo">
-                José Raunelli ha brindado servicios contractuales, societarios y
-                sobre regulación financiera a distantes empresas nacionales e
-                internacionales, destacando empresas de la industria financiera,
-                educación, tecnología, fintech y telecomunicaciones.
-              </p>
-              <p class="mt-2 text-justify font-parrafo">
-                Ha realizado publicaciones para Giuristi: Revista De Derecho
-                Corporativo de la Universidad ESAN, así como para la revista de
-                Actualidad Mercantil, revista de Derecho de la Pontificia
-                Universidad Católica del Perú.
-              </p>
-
-              <!-- Sección de Botones -->
-              <div class="flex flex-col space-y-4 my-10">
-                <button class="bg-yellow-400 text-white px-4 py-2">
-                  Más información +
-                </button>
-                <button class="bg-yellow-400 text-white px-4 py-2">
-                  Publicaciones o noticias -
-                </button>
-              </div>
-
-              <!-- Sección de Noticias -->
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
-                <div class="bg-white border overflow-hidden shadow-sm">
-                  <img
-                    src="assets/images/noticias/img_noticia_1.jpg"
-                    alt="Noticia 1"
-                    class="w-full h-32 object-cover"
-                  />
-                  <div class="p-4">
-                    <p class="text-gray-700 text-sm font-parrafo">
-                      Lorem Ipsum es simplemente el texto de relleno de las
-                      imprentas y archivos de texto. Lorem Ipsum ha sido el
-                      texto de relleno estándar de las industrias desde el año
-                      1500, cuando un impresor
-                    </p>
-                    <a href="#" class="text-yellow-400 mt-2 inline-block"
-                      >Ver publicación</a
-                    >
-                  </div>
-                </div>
-                <div class="bg-white border overflow-hidden shadow-sm">
-                  <img
-                    src="assets/images/noticias/img_noticia_2.jpg"
-                    alt="Noticia 2"
-                    class="w-full h-32 object-cover"
-                  />
-                  <div class="p-4">
-                    <p class="text-gray-700 text-sm font-parrafo">
-                      Lorem Ipsum es simplemente el texto de relleno de las
-                      imprentas y archivos de texto. Lorem Ipsum ha sido el
-                      texto de relleno estándar de las industrias desde el año
-                      1500, cuando un impresor
-                    </p>
-                    <a href="#" class="text-yellow-400 mt-2 inline-block"
-                      >Ver publicación</a
-                    >
-                  </div>
-                </div>
-                <div class="bg-white border overflow-hidden shadow-sm">
-                  <img
-                    src="assets/images/noticias/img_noticia_3.jpg"
-                    alt="Noticia 3"
-                    class="w-full h-32 object-cover"
-                  />
-                  <div class="p-4">
-                    <p class="text-gray-700 text-sm font-parrafo">
-                      Lorem Ipsum es simplemente el texto de relleno de las
-                      imprentas y archivos de texto. Lorem Ipsum ha sido el
-                      texto de relleno estándar de las industrias desde el año
-                      1500, cuando un impresor
-                    </p>
-                    <a href="#" class="text-yellow-400 mt-2 inline-block"
-                      >Ver publicación</a
-                    >
-                  </div>
-                </div>
-                <div class="bg-white border overflow-hidden shadow-sm">
-                  <img
-                    src="assets/images/noticias/img_noticia_4.jpg"
-                    alt="Noticia 4"
-                    class="w-full h-32 object-cover"
-                  />
-                  <div class="p-4">
-                    <p class="text-gray-700 text-sm font-parrafo">
-                      Lorem Ipsum es simplemente el texto de relleno de las
-                      imprentas y archivos de texto. Lorem Ipsum ha sido el
-                      texto de relleno estándar de las industrias desde el año
-                      1500, cuando un impresor
-                    </p>
-                    <a href="#" class="text-yellow-400 mt-2 inline-block"
-                      >Ver publicación</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div
-  id="default-modal_15"
-  tabindex="-1"
-  aria-hidden="true"
-  class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
->
-  <div class="relative p-4 w-full max-w-6xl max-h-full">
-    <!-- Modal content -->
-    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-      <!-- Modal header -->
-      <div class="flex items-center justify-between p-4 md:p-5 rounded-t">
-        <button
-          type="button"
-          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-          data-modal-hide="default-modal_15"
-        >
-          <svg
-            class="w-3 h-3"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 14 14"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-            />
-          </svg>
-          <span class="sr-only">Close modal</span>
-        </button>
-      </div>
-      <!-- Modal body -->
-      <div class="p-4 md:p-5 space-y-4">
-        <div class="mx-auto p-6">
-          <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
-            <!-- Columna de la Imagen -->
-            <div class="md:col-span-2 flex flex-col items-center">
-              <img
-                src="assets/images/nuestro-equipo/socio_15.jpg"
+                src="{{ urlRaiz + ruta_imagen[14] }}"
                 alt="Imagen de perfil"
                 class=""
               />
@@ -757,10 +736,13 @@
 
             <!-- Columna de Información Personal -->
             <div class="md:col-span-3 p-10">
-              <h1 class="text-2xl font-titulo font-bold">Ximena Márquez</h1>
+              <h1 class="text-2xl font-titulo font-bold">
+                {{ nombre[14] }}
+              </h1>
               <p class="text-gray-500">Socio</p>
               <p class="mt-2 font-parrafo">
-                xmarquez&#64;evv.pe<br />+51 987828782
+                {{ correo[14] }}
+                <br />+(51) {{ telefono[14] }}
               </p>
               <button
                 class="mt-4 bg-yellow-400 text-white px-4 py-2 font-parrafo"
@@ -779,20 +761,10 @@
               <h2 class="text-xl font-bold mt-4 font-subtitulo">
                 Descripción:
               </h2>
-              <p class="mt-2 text-justify font-parrafo">
-                Bachiller en Derecho por la Universidad de Piura con experiencia
-                en la rama Laboral, Administrativa, Procesal y Regulatoria.
-                Posee una sólida capacidad de aprendizaje y aplicación de
-                conocimientos en el ámbito profesional, además de una gran
-                disposición para adaptarme a diferentes áreas asignadas.
-              </p>
-              <p class="mt-2 text-justify font-parrafo">
-                En Valderrama Abogados ha elaborado e investigado artículos de
-                actualidad y alertas laborales, contratos, acuerdos, políticas
-                internas, entre otros. Asimismo, ha revisado el cumplimiento
-                laboral de clientes, estados de trámites migratorios y consultas
-                migratorias.
-              </p>
+
+              <div class="mt-2 text-justify font-parrafo">
+                {{ resumen[14] }}
+              </div>
 
               <!-- Sección de Botones -->
               <div class="flex flex-col space-y-4 my-10">

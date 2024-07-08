@@ -20,7 +20,7 @@
       <!-- Primera columna con imagen -->
       <div class="border col-span-1 md:col-span-2 border-solid border-gray-300">
         <img
-          src="assets/images/nuestro-equipo/socio_10.jpg"
+          src="{{ urlRaiz + ruta_imagen[9] }}"
           alt="Imagen"
           class="w-full h-full object-cover"
         />
@@ -29,15 +29,92 @@
       <div
         class="space-y-4 border col-span-1 md:col-span-3 border-solid border-gray-300 p-16"
       >
-        <h1 class="text-2xl font-parrafo font-bold mb-2">Luis Cabrera</h1>
+        <h1 class="text-2xl font-parrafo font-bold mb-2">{{ nombre[9] }}</h1>
         <p class="font-parrafo text-gray-800 text-lg sm:text-2xl text-justify">
-          Profesional con amplia experiencia en el sector inmobiliario,
-          especializado en temas contractuales, registrales y municipales. Su
-          trayectoria abarca la consultoría en la planificación, estructuración
-          y ejecución de proyectos inmobiliarios. Ha proporcionado servicios
-          integrales a promotores, desarrolladores y fondos de inversión,
-          apoyándolos en todas las etapas de sus transacciones comerciales y
-          proyectos inmobiliarios.
+          {{ resumen[9] }}
+        </p>
+        <p>
+          <a
+            class="cursor-pointer font-parrafo text-yellow-400 text-lg sm:text-2xl"
+            data-modal-target="default-modal_9"
+            data-modal-toggle="default-modal_9"
+            >Leer más</a
+          >
+        </p>
+      </div>
+      <!-- Tercera columna con lista -->
+      <div
+        class="border col-span-1 md:col-span-2 border-solid border-gray-300 p-10 bg-gray-600"
+      >
+        <div class="flex items-center justify-center h-full">
+          <ul class="space-y-4 font-parrafo text-white text-lg sm:text-2xl">
+            <li>
+              <img
+                class="h-12 inline"
+                src="assets/images/iconos/correo.png"
+                alt=""
+              />
+              {{ correo[9] }}
+            </li>
+            <li>
+              <img
+                class="h-12 inline"
+                src="assets/images/iconos/celular.png"
+                alt=""
+              />
+              {{ telefono[9] }}
+            </li>
+            <li>
+              <img
+                class="h-12 inline"
+                src="assets/images/iconos/descarga.png"
+                alt=""
+              />
+              Descargar C.V
+            </li>
+            <li>
+              <img
+                class="h-12 inline"
+                src="assets/images/iconos/medalla.png"
+                alt=""
+              />
+              Logros:
+            </li>
+            <li>
+              <img
+                class="h-20 inline ml-10 mr-4"
+                src="assets/images/iconos/logro.png"
+                alt=""
+              />
+              <img
+                class="h-20 inline"
+                src="assets/images/iconos/logro.png"
+                alt=""
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="grid grid-cols-1 md:grid-cols-7 gap-0 border border-solid border-gray-300 my-14"
+    >
+      <!-- Primera columna con imagen -->
+      <div class="border col-span-1 md:col-span-2 border-solid border-gray-300">
+        <img
+          src="{{ urlRaiz + ruta_imagen[10] }}"
+          alt="Imagen"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <!-- Segunda columna con título y descripción -->
+      <div
+        class="space-y-4 border col-span-1 md:col-span-3 border-solid border-gray-300 p-16"
+      >
+        <h1 class="text-2xl font-parrafo font-bold mb-2">{{ nombre[10] }}</h1>
+        <p class="font-parrafo text-gray-800 text-lg sm:text-2xl text-justify">
+          {{ resumen[10] }}
         </p>
         <p>
           <a
@@ -60,7 +137,7 @@
                 src="assets/images/iconos/correo.png"
                 alt=""
               />
-              lcabrera&#64;evv.pe
+              {{ correo[10] }}
             </li>
             <li>
               <img
@@ -68,7 +145,7 @@
                 src="assets/images/iconos/celular.png"
                 alt=""
               />
-              933 636 915
+              {{ telefono[10] }}
             </li>
             <li>
               <img
@@ -109,7 +186,7 @@
       <!-- Primera columna con imagen -->
       <div class="border col-span-1 md:col-span-2 border-solid border-gray-300">
         <img
-          src="assets/images/nuestro-equipo/socio_11.jpg"
+          src="{{ urlRaiz + ruta_imagen[11] }}"
           alt="Imagen"
           class="w-full h-full object-cover"
         />
@@ -118,14 +195,9 @@
       <div
         class="space-y-4 border col-span-1 md:col-span-3 border-solid border-gray-300 p-16"
       >
-        <h1 class="text-2xl font-parrafo font-bold mb-2">Ximena Samamé</h1>
+        <h1 class="text-2xl font-parrafo font-bold mb-2">{{ nombre[11] }}</h1>
         <p class="font-parrafo text-gray-800 text-lg sm:text-2xl text-justify">
-          Ximena cuenta con amplia experiencia en materia de Protección al
-          Consumidor en la redacción de escritos denuncias, descargos y recursos
-          impugnatorios para los procedimientos administrativos sancionadores;
-          en materia de Signos Distintivos en el registro de marcas, absolución
-          de oposiciones, cancelaciones y nulidades de marcas presentadas en
-          procedimientos administrativos.
+          {{ resumen[11] }}
         </p>
         <p>
           <a
@@ -148,7 +220,7 @@
                 src="assets/images/iconos/correo.png"
                 alt=""
               />
-              xsamame&#64;evv.pe
+              {{ correo[11] }}
             </li>
             <li>
               <img
@@ -156,96 +228,8 @@
                 src="assets/images/iconos/celular.png"
                 alt=""
               />
-              945 075 419
+              {{ telefono[11] }}
             </li>
-            <li>
-              <img
-                class="h-12 inline"
-                src="assets/images/iconos/descarga.png"
-                alt=""
-              />
-              Descargar C.V
-            </li>
-            <li>
-              <img
-                class="h-12 inline"
-                src="assets/images/iconos/medalla.png"
-                alt=""
-              />
-              Logros:
-            </li>
-            <li>
-              <img
-                class="h-20 inline ml-10 mr-4"
-                src="assets/images/iconos/logro.png"
-                alt=""
-              />
-              <img
-                class="h-20 inline"
-                src="assets/images/iconos/logro.png"
-                alt=""
-              />
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div
-      class="grid grid-cols-1 md:grid-cols-7 gap-0 border border-solid border-gray-300 my-14"
-    >
-      <!-- Primera columna con imagen -->
-      <div class="border col-span-1 md:col-span-2 border-solid border-gray-300">
-        <img
-          src="assets/images/nuestro-equipo/socio_12.jpg"
-          alt="Imagen"
-          class="w-full h-full object-cover"
-        />
-      </div>
-      <!-- Segunda columna con título y descripción -->
-      <div
-        class="space-y-4 border col-span-1 md:col-span-3 border-solid border-gray-300 p-16"
-      >
-        <h1 class="text-2xl font-parrafo font-bold mb-2">Allison Trelles</h1>
-        <p class="font-parrafo text-gray-800 text-lg sm:text-2xl text-justify">
-          Abogada por la Universidad de Piura y Maestría con mención en Derecho
-          Laboral por la Universidad Nacional de Piura. Acreditada como
-          conciliadora extrajudicial por el Ministerio de Justicia y Derechos
-          Humanos. Con experiencia en Derecho Laboral, Derecho Administrativo y
-          Derecho Procesal Laboral.
-        </p>
-        <p>
-          <a
-            class="cursor-pointer font-parrafo text-yellow-400 text-lg sm:text-2xl"
-            data-modal-target="default-modal_12"
-            data-modal-toggle="default-modal_12"
-            >Leer más</a
-          >
-        </p>
-      </div>
-      <!-- Tercera columna con lista -->
-      <div
-        class="border col-span-1 md:col-span-2 border-solid border-gray-300 p-10 bg-gray-600"
-      >
-        <div class="flex items-center justify-center h-full">
-          <ul class="space-y-4 font-parrafo text-white text-lg sm:text-2xl">
-            <li>
-              <img
-                class="h-12 inline"
-                src="assets/images/iconos/correo.png"
-                alt=""
-              />
-              atrelles&#64;evv.pe
-            </li>
-            <li>
-              <img
-                class="h-12 inline"
-                src="assets/images/iconos/celular.png"
-                alt=""
-              />
-              949 487 825
-            </li>
-
             <li>
               <img
                 class="h-12 inline"
@@ -335,6 +319,194 @@
 
 <!-- Main modal -->
 <div
+  id="default-modal_9"
+  tabindex="-1"
+  aria-hidden="true"
+  class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+>
+  <div class="relative p-4 w-full max-w-6xl max-h-full">
+    <!-- Modal content -->
+    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+      <!-- Modal header -->
+      <div class="flex items-center justify-between p-4 md:p-5 rounded-t">
+        <button
+          type="button"
+          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+          data-modal-hide="default-modal_9"
+        >
+          <svg
+            class="w-3 h-3"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+            />
+          </svg>
+          <span class="sr-only">Close modal</span>
+        </button>
+      </div>
+      <!-- Modal body -->
+      <div class="p-4 md:p-5 space-y-4">
+        <div class="mx-auto p-6">
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+            <!-- Columna de la Imagen -->
+            <div class="md:col-span-2 flex flex-col items-center">
+              <img
+                src="{{ urlRaiz + ruta_imagen[9] }}"
+                alt="Imagen de perfil"
+                class=""
+              />
+              <p class="italic text-center font-parrafo py-5">
+                "Siempre disponible para cualquier consulta y preocupado por
+                obtener el mejor resultado para sus clientes"
+              </p>
+              <div class="flex space-x-4 mt-4">
+                <img
+                  src="assets/images/iconos/logro.png"
+                  alt="Logo 1"
+                  class="w-20 h-20"
+                />
+                <img
+                  src="assets/images/iconos/logro.png"
+                  alt="Logo 2"
+                  class="w-20 h-20"
+                />
+              </div>
+            </div>
+
+            <!-- Columna de Información Personal -->
+            <div class="md:col-span-3 p-10">
+              <h1 class="text-2xl font-titulo font-bold">
+                {{ nombre[9] }}
+              </h1>
+              <p class="text-gray-500">Socio</p>
+              <p class="mt-2 font-parrafo">
+                {{ correo[9] }}
+                <br />+(51) {{ telefono[9] }}
+              </p>
+              <button
+                class="mt-4 bg-yellow-400 text-white px-4 py-2 font-parrafo"
+              >
+                Descargar C.V
+              </button>
+              <hr class="my-4" />
+              <h2 class="text-xl font-bold font-subtitulo">
+                Áreas de Práctica:
+              </h2>
+              <p class="mt-2 font-parrafo">
+                Corporativo / Fusiones y Adquisiciones, Proyectos e
+                Infraestructura, Derecho de Finanzas, Mercado de Capitales,
+                Titulizaciones y Fondos de Inversión
+              </p>
+              <h2 class="text-xl font-bold mt-4 font-subtitulo">
+                Descripción:
+              </h2>
+
+              <div class="mt-2 text-justify font-parrafo">
+                {{ resumen[9] }}
+              </div>
+
+              <!-- Sección de Botones -->
+              <div class="flex flex-col space-y-4 my-10">
+                <button class="bg-yellow-400 text-white px-4 py-2">
+                  Más información +
+                </button>
+                <button class="bg-yellow-400 text-white px-4 py-2">
+                  Publicaciones o noticias -
+                </button>
+              </div>
+
+              <!-- Sección de Noticias -->
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+                <div class="bg-white border overflow-hidden shadow-sm">
+                  <img
+                    src="assets/images/noticias/img_noticia_1.jpg"
+                    alt="Noticia 1"
+                    class="w-full h-32 object-cover"
+                  />
+                  <div class="p-4">
+                    <p class="text-gray-700 text-sm font-parrafo">
+                      Lorem Ipsum es simplemente el texto de relleno de las
+                      imprentas y archivos de texto. Lorem Ipsum ha sido el
+                      texto de relleno estándar de las industrias desde el año
+                      1500, cuando un impresor
+                    </p>
+                    <a href="#" class="text-yellow-400 mt-2 inline-block"
+                      >Ver publicación</a
+                    >
+                  </div>
+                </div>
+                <div class="bg-white border overflow-hidden shadow-sm">
+                  <img
+                    src="assets/images/noticias/img_noticia_2.jpg"
+                    alt="Noticia 2"
+                    class="w-full h-32 object-cover"
+                  />
+                  <div class="p-4">
+                    <p class="text-gray-700 text-sm font-parrafo">
+                      Lorem Ipsum es simplemente el texto de relleno de las
+                      imprentas y archivos de texto. Lorem Ipsum ha sido el
+                      texto de relleno estándar de las industrias desde el año
+                      1500, cuando un impresor
+                    </p>
+                    <a href="#" class="text-yellow-400 mt-2 inline-block"
+                      >Ver publicación</a
+                    >
+                  </div>
+                </div>
+                <div class="bg-white border overflow-hidden shadow-sm">
+                  <img
+                    src="assets/images/noticias/img_noticia_3.jpg"
+                    alt="Noticia 3"
+                    class="w-full h-32 object-cover"
+                  />
+                  <div class="p-4">
+                    <p class="text-gray-700 text-sm font-parrafo">
+                      Lorem Ipsum es simplemente el texto de relleno de las
+                      imprentas y archivos de texto. Lorem Ipsum ha sido el
+                      texto de relleno estándar de las industrias desde el año
+                      1500, cuando un impresor
+                    </p>
+                    <a href="#" class="text-yellow-400 mt-2 inline-block"
+                      >Ver publicación</a
+                    >
+                  </div>
+                </div>
+                <div class="bg-white border overflow-hidden shadow-sm">
+                  <img
+                    src="assets/images/noticias/img_noticia_4.jpg"
+                    alt="Noticia 4"
+                    class="w-full h-32 object-cover"
+                  />
+                  <div class="p-4">
+                    <p class="text-gray-700 text-sm font-parrafo">
+                      Lorem Ipsum es simplemente el texto de relleno de las
+                      imprentas y archivos de texto. Lorem Ipsum ha sido el
+                      texto de relleno estándar de las industrias desde el año
+                      1500, cuando un impresor
+                    </p>
+                    <a href="#" class="text-yellow-400 mt-2 inline-block"
+                      >Ver publicación</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
   id="default-modal_10"
   tabindex="-1"
   aria-hidden="true"
@@ -375,7 +547,7 @@
             <!-- Columna de la Imagen -->
             <div class="md:col-span-2 flex flex-col items-center">
               <img
-                src="assets/images/nuestro-equipo/socio_10.jpg"
+                src="{{ urlRaiz + ruta_imagen[10] }}"
                 alt="Imagen de perfil"
                 class=""
               />
@@ -399,11 +571,13 @@
 
             <!-- Columna de Información Personal -->
             <div class="md:col-span-3 p-10">
-              <h1 class="text-2xl font-titulo font-bold">Luis Cabrera</h1>
+              <h1 class="text-2xl font-titulo font-bold">
+                {{ nombre[10] }}
+              </h1>
               <p class="text-gray-500">Socio</p>
               <p class="mt-2 font-parrafo">
-                lcabrera&#64;evv.pe
-                <br />+(51) 933 636 915
+                {{ correo[9] }}
+                <br />+(51) {{ telefono[10] }}
               </p>
               <button
                 class="mt-4 bg-yellow-400 text-white px-4 py-2 font-parrafo"
@@ -422,24 +596,10 @@
               <h2 class="text-xl font-bold mt-4 font-subtitulo">
                 Descripción:
               </h2>
-              <p class="mt-2 text-justify font-parrafo">
-                Profesional con amplia experiencia en el sector inmobiliario,
-                especializado en temas contractuales, registrales y municipales.
-                Su trayectoria abarca la consultoría en la planificación,
-                estructuración y ejecución de proyectos inmobiliarios. Ha
-                proporcionado servicios integrales a promotores, desarrolladores
-                y fondos de inversión, apoyándolos en todas las etapas de sus
-                transacciones comerciales y proyectos inmobiliarios.
-              </p>
-              <p class="mt-2 text-justify font-parrafo">
-                Ha trabajado en el Tribunal Registral y la Superintendencia
-                Nacional de Registros Públicos, adquiriendo un sólido
-                conocimiento materia de calificación registral. Además, ofrece
-                asesoría en procedimientos municipales, abarcando licencias de
-                edificación, habilitaciones urbanas, permisos, autorizaciones,
-                procedimientos administrativos y fiscalizaciones tributarias,
-                entre otros.
-              </p>
+
+              <div class="mt-2 text-justify font-parrafo">
+                {{ resumen[10] }}
+              </div>
 
               <!-- Sección de Botones -->
               <div class="flex flex-col space-y-4 my-10">
@@ -575,209 +735,7 @@
             <!-- Columna de la Imagen -->
             <div class="md:col-span-2 flex flex-col items-center">
               <img
-                src="assets/images/nuestro-equipo/socio_11.jpg"
-                alt="Imagen de perfil"
-                class=""
-              />
-              <p class="italic text-center font-parrafo py-5">
-                "Siempre disponible para cualquier consulta y preocupada por
-                obtener el mejor resultado para sus clientes"
-              </p>
-              <div class="flex space-x-4 mt-4">
-                <img
-                  src="assets/images/iconos/logro.png"
-                  alt="Logo 1"
-                  class="w-20 h-20"
-                />
-                <img
-                  src="assets/images/iconos/logro.png"
-                  alt="Logo 2"
-                  class="w-20 h-20"
-                />
-              </div>
-            </div>
-
-            <!-- Columna de Información Personal -->
-            <div class="md:col-span-3 p-10">
-              <h1 class="text-2xl font-titulo font-bold">Ximena Samamé</h1>
-              <p class="text-gray-500">Socio</p>
-              <p class="mt-2 font-parrafo">
-                xsamame&#64;evv.pe<br />+51 945 075 419
-              </p>
-              <button
-                class="mt-4 bg-yellow-400 text-white px-4 py-2 font-parrafo"
-              >
-                Descargar C.V
-              </button>
-              <hr class="my-4" />
-              <h2 class="text-xl font-bold font-subtitulo">
-                Áreas de Práctica:
-              </h2>
-              <p class="mt-2 font-parrafo">
-                Corporativo / Fusiones y Adquisiciones, Proyectos e
-                Infraestructura, Derecho de Finanzas, Mercado de Capitales,
-                Titulizaciones y Fondos de Inversión
-              </p>
-              <h2 class="text-xl font-bold mt-4 font-subtitulo">
-                Descripción:
-              </h2>
-              <p class="mt-2 text-justify font-parrafo">
-                Ximena cuenta con amplia experiencia en materia de Protección al
-                Consumidor en la redacción de escritos denuncias, descargos y
-                recursos impugnatorios para los procedimientos administrativos
-                sancionadores; en materia de Signos Distintivos en el registro
-                de marcas, absolución de oposiciones, cancelaciones y nulidades
-                de marcas presentadas en procedimientos administrativos; en
-                materia de protección de datos personales implementando
-                Programas de Gestión y Medidas de Seguridad para la Protección
-                de Datos Personales, redacción de contestación de denuncias
-                presentadas ante la Autoridad de Protección de datos personales
-                como parte de procedimientos administrativos y en materia
-                regulatoria en la elaboración de solicitudes de autorizaciones,
-                licencias y permisos ante diferentes entidades públicas.
-              </p>
-              <p class="mt-2 text-justify font-parrafo">
-                Brinda capacitaciones en materia de atención de reclamaciones
-                interpuestas por consumidores. Participa en notas de prensa, con
-                aportes sobre noticias relevantes, publicaciones de proyectos de
-                ley, entre otros.
-              </p>
-
-              <!-- Sección de Botones -->
-              <div class="flex flex-col space-y-4 my-10">
-                <button class="bg-yellow-400 text-white px-4 py-2">
-                  Más información +
-                </button>
-                <button class="bg-yellow-400 text-white px-4 py-2">
-                  Publicaciones o noticias -
-                </button>
-              </div>
-
-              <!-- Sección de Noticias -->
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
-                <div class="bg-white border overflow-hidden shadow-sm">
-                  <img
-                    src="assets/images/noticias/img_noticia_1.jpg"
-                    alt="Noticia 1"
-                    class="w-full h-32 object-cover"
-                  />
-                  <div class="p-4">
-                    <p class="text-gray-700 text-sm font-parrafo">
-                      Lorem Ipsum es simplemente el texto de relleno de las
-                      imprentas y archivos de texto. Lorem Ipsum ha sido el
-                      texto de relleno estándar de las industrias desde el año
-                      1500, cuando un impresor
-                    </p>
-                    <a href="#" class="text-yellow-400 mt-2 inline-block"
-                      >Ver publicación</a
-                    >
-                  </div>
-                </div>
-                <div class="bg-white border overflow-hidden shadow-sm">
-                  <img
-                    src="assets/images/noticias/img_noticia_2.jpg"
-                    alt="Noticia 2"
-                    class="w-full h-32 object-cover"
-                  />
-                  <div class="p-4">
-                    <p class="text-gray-700 text-sm font-parrafo">
-                      Lorem Ipsum es simplemente el texto de relleno de las
-                      imprentas y archivos de texto. Lorem Ipsum ha sido el
-                      texto de relleno estándar de las industrias desde el año
-                      1500, cuando un impresor
-                    </p>
-                    <a href="#" class="text-yellow-400 mt-2 inline-block"
-                      >Ver publicación</a
-                    >
-                  </div>
-                </div>
-                <div class="bg-white border overflow-hidden shadow-sm">
-                  <img
-                    src="assets/images/noticias/img_noticia_3.jpg"
-                    alt="Noticia 3"
-                    class="w-full h-32 object-cover"
-                  />
-                  <div class="p-4">
-                    <p class="text-gray-700 text-sm font-parrafo">
-                      Lorem Ipsum es simplemente el texto de relleno de las
-                      imprentas y archivos de texto. Lorem Ipsum ha sido el
-                      texto de relleno estándar de las industrias desde el año
-                      1500, cuando un impresor
-                    </p>
-                    <a href="#" class="text-yellow-400 mt-2 inline-block"
-                      >Ver publicación</a
-                    >
-                  </div>
-                </div>
-                <div class="bg-white border overflow-hidden shadow-sm">
-                  <img
-                    src="assets/images/noticias/img_noticia_4.jpg"
-                    alt="Noticia 4"
-                    class="w-full h-32 object-cover"
-                  />
-                  <div class="p-4">
-                    <p class="text-gray-700 text-sm font-parrafo">
-                      Lorem Ipsum es simplemente el texto de relleno de las
-                      imprentas y archivos de texto. Lorem Ipsum ha sido el
-                      texto de relleno estándar de las industrias desde el año
-                      1500, cuando un impresor
-                    </p>
-                    <a href="#" class="text-yellow-400 mt-2 inline-block"
-                      >Ver publicación</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div
-  id="default-modal_12"
-  tabindex="-1"
-  aria-hidden="true"
-  class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
->
-  <div class="relative p-4 w-full max-w-6xl max-h-full">
-    <!-- Modal content -->
-    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-      <!-- Modal header -->
-      <div class="flex items-center justify-between p-4 md:p-5 rounded-t">
-        <button
-          type="button"
-          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-          data-modal-hide="default-modal_12"
-        >
-          <svg
-            class="w-3 h-3"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 14 14"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-            />
-          </svg>
-          <span class="sr-only">Close modal</span>
-        </button>
-      </div>
-      <!-- Modal body -->
-      <div class="p-4 md:p-5 space-y-4">
-        <div class="mx-auto p-6">
-          <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
-            <!-- Columna de la Imagen -->
-            <div class="md:col-span-2 flex flex-col items-center">
-              <img
-                src="assets/images/nuestro-equipo/socio_12.jpg"
+                src="{{ urlRaiz + ruta_imagen[11] }}"
                 alt="Imagen de perfil"
                 class=""
               />
@@ -801,10 +759,13 @@
 
             <!-- Columna de Información Personal -->
             <div class="md:col-span-3 p-10">
-              <h1 class="text-2xl font-titulo font-bold">Allison Trelles</h1>
+              <h1 class="text-2xl font-titulo font-bold">
+                {{ nombre[11] }}
+              </h1>
               <p class="text-gray-500">Socio</p>
               <p class="mt-2 font-parrafo">
-                atrelles&#64;evv.pe<br />+51 949 487 825
+                {{ correo[11] }}
+                <br />+(51) {{ telefono[11] }}
               </p>
               <button
                 class="mt-4 bg-yellow-400 text-white px-4 py-2 font-parrafo"
@@ -823,24 +784,10 @@
               <h2 class="text-xl font-bold mt-4 font-subtitulo">
                 Descripción:
               </h2>
-              <p class="mt-2 text-justify font-parrafo">
-                Abogada por la Universidad de Piura y Maestría con mención en
-                Derecho Laboral por la Universidad Nacional de Piura. Acreditada
-                como conciliadora extrajudicial por el Ministerio de Justicia y
-                Derechos Humanos. Con experiencia en Derecho Laboral, Derecho
-                Administrativo y Derecho Procesal Laboral.
-              </p>
-              <p class="mt-2 text-justify font-parrafo">
-                Ha participado en la elaboración de diversas estrategias frente
-                a la actividad inspectiva de SUNAFIL y ha ejercido
-                representación de las compañías ante las distintas
-                conciliaciones del Ministerio de Trabajo. Ha participado en el
-                planteamiento de defensa y litigado en favor de compañías del
-                sector agrario, construcción e intermediación laboral, en
-                materias de Seguridad y Salud en el Trabajo, Indemnización por
-                despido arbitrario y en diversos procesos de índole contencioso
-                administrativo frente a ESSALUD y SUNAFIL.
-              </p>
+
+              <div class="mt-2 text-justify font-parrafo">
+                {{ resumen[11] }}
+              </div>
 
               <!-- Sección de Botones -->
               <div class="flex flex-col space-y-4 my-10">
