@@ -24,6 +24,7 @@ import { NuestroEquipo2Component } from './pages/vista/nuestro-equipo/nuestro-eq
 import { NuestroEquipo3Component } from './pages/vista/nuestro-equipo/nuestro-equipo-3/nuestro-equipo-3.component';
 import { NuestroEquipo4Component } from './pages/vista/nuestro-equipo/nuestro-equipo-4/nuestro-equipo-4.component';
 import { NuestroEquipo5Component } from './pages/vista/nuestro-equipo/nuestro-equipo-5/nuestro-equipo-5.component';
+import { NuestroEquipo6Component } from './pages/vista/nuestro-equipo/nuestro-equipo-6/nuestro-equipo-6.component';
 
 export const routes: Routes = [
   {
@@ -70,6 +71,10 @@ export const routes: Routes = [
       {
         path: 'nuestro-equipo-5',
         component: NuestroEquipo5Component,
+      },
+      {
+        path: 'nuestro-equipo-6',
+        component: NuestroEquipo6Component,
       },
       {
         path: 'firma',
