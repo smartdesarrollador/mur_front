@@ -15,30 +15,10 @@ import { Observable } from 'rxjs';
 })
 export class UploadService {
   selectCategory: Upload = new Upload();
-  urlListar = environment.apiListarFiles;
-  urlUpdateFile = environment.apiUpdateFile;
-  urlDelete = environment.apiDeleteFile;
+  urlListar = environment.apiListarFilesBanner;
   constructor(private http: HttpClient) {}
 
   getCategories(): Observable<Upload> {
     return this.http.get(this.urlListar);
-  }
-
-  uploadData(data: any) {
-    const headers = new HttpHeaders();
-    return this.http.post(environment.apiUrl3, data, {
-      headers: headers,
-    });
-  }
-
-  updateData(data: any) {
-    const headers = new HttpHeaders();
-    return this.http.post(environment.apiUpdateFile, data, {
-      headers: headers,
-    });
-  }
-
-  deleteCategory(id: number) {
-    return this.http.delete(this.urlDelete + '/' + id);
   }
 }

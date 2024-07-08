@@ -2,7 +2,9 @@
   <ng-template *ngFor="let item of listBanners" carouselSlide>
     <section
       class="bg-cover h-[400px] sm:h-screen bg-center bg-no-repeat bg-gray-700"
-      [ngStyle]="{ 'background-image': 'url(' + urlRaiz + item.url + ')' }"
+      [ngStyle]="{
+        'background-image': 'url(' + urlRaiz + item.ruta_imagen + ')'
+      }"
     >
       <div
         class="px-10 max-w-[100%] md:max-w-[100%] text-center py-24 lg:py-80"

@@ -28,4 +28,8 @@ export const environment = {
   apiUrl3Producto: 'http://127.0.0.1:8000/api/productos/subir',
   apiUpdateFileProducto: 'http://127.0.0.1:8000/api/productos/update',
   apiDeleteFileProducto: 'http://127.0.0.1:8000/api/productos',
+  apiUrl3Banner: 'http://127.0.0.1:8000/api/banners/subir',
+  apiUpdateFileBanner: 'http://127.0.0.1:8000/api/banners/update',
+  apiListarFilesBanner: 'http://127.0.0.1:8000/api/banners',
+  apiDeleteFileBanner: 'http://127.0.0.1:8000/api/banners',
 };
