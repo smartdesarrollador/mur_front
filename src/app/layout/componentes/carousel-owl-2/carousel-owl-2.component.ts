@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import { Carousel } from 'src/app/models/carousel.model';
-import { CarouselService } from 'src/app/services/carousel.service';
+import { Slider } from 'src/app/models/slider.model';
+import { SliderService } from 'src/app/services/slider.service';
 import { environment } from 'src/environments/environment';
 import { CommonModule } from '@angular/common';
 
@@ -16,7 +16,7 @@ import { CommonModule } from '@angular/common';
 export class CarouselOwl2Component implements OnInit {
   urlRaiz = environment.urlRaiz + '/';
   listBanners: any = [];
-  constructor(private dataService: CarouselService) {}
+  constructor(private dataService: SliderService) {}
 
   ngOnInit(): void {
     this.loadBanners();

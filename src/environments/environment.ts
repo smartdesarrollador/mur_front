@@ -37,6 +37,10 @@ export const environment = {
   apiUpdateFileBanner: 'https://apimur.amorinomoda.com/api/banners/update',
   apiListarFilesBanner: 'https://apimur.amorinomoda.com/api/banners',
   apiDeleteFileBanner: 'https://apimur.amorinomoda.com/api/banners',
+  apiUrl3Slider: 'https://apimur.amorinomoda.com/api/sliders/subir',
+  apiUpdateFileSlider: 'https://apimur.amorinomoda.com/api/sliders/update',
+  apiListarFilesSlider: 'https://apimur.amorinomoda.com/api/sliders',
+  apiDeleteFileSlider: 'https://apimur.amorinomoda.com/api/sliders',
 };
 
 /* export const environment = {
@@ -73,6 +77,10 @@ export const environment = {
   apiUpdateFileBanner: 'https://evv.pe/api/banners/update',
   apiListarFilesBanner: 'https://evv.pe/api/banners',
   apiDeleteFileBanner: 'https://evv.pe/api/banners',
+  apiUrl3Slider: 'https://evv.pe/api/sliders/subir',
+  apiUpdateFileSlider: 'https://evv.pe/api/sliders/update',
+  apiListarFilesSlider: 'https://evv.pe/api/sliders',
+  apiDeleteFileSlider: 'https://evv.pe/api/sliders',
   
 };
  */
