@@ -20,12 +20,15 @@ export class NuestroEquipo3Component implements OnInit {
 
   id_producto: number[] = [];
   nombre: string[] = [];
+  cargo: string[] = [];
   resumen: string[] = [];
   descripcion: string[] = [];
   correo: string[] = [];
   telefono: string[] = [];
   imagen: string[] = [];
   ruta_imagen: string[] = [];
+  pdf: string[] = [];
+  ruta_pdf: string[] = [];
   categoria_producto_id: number[] = [];
 
   constructor(private dataService: ProductoService, private router: Router) {}
@@ -46,12 +49,15 @@ export class NuestroEquipo3Component implements OnInit {
   populateBannerData() {
     this.listBanners.forEach((banner: any) => {
       this.nombre.push(banner.nombre);
+      this.cargo.push(banner.cargo);
       this.resumen.push(banner.resumen);
       this.descripcion.push(banner.descripcion);
       this.correo.push(banner.correo);
       this.telefono.push(banner.telefono);
       this.imagen.push(banner.imagen);
       this.ruta_imagen.push(banner.ruta_imagen);
+      this.pdf.push(banner.pdf);
+      this.ruta_pdf.push(banner.ruta_pdf);
     });
   }
 

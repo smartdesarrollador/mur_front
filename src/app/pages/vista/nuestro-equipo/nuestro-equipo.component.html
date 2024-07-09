@@ -30,6 +30,7 @@
         class="space-y-4 border col-span-1 md:col-span-3 border-solid border-gray-300 p-16"
       >
         <h1 class="text-2xl font-parrafo font-bold mb-2">{{ nombre[0] }}</h1>
+        <p class="text-gray-500">{{ cargo[0] }}</p>
         <p class="font-parrafo text-gray-800 text-lg sm:text-2xl text-justify">
           {{ resumen[0] }}
         </p>
@@ -65,12 +66,14 @@
               {{ telefono[0] }}
             </li>
             <li>
-              <img
-                class="h-12 inline"
-                src="assets/images/iconos/descarga.png"
-                alt=""
-              />
-              Descargar C.V
+              <a href="{{ urlRaiz + ruta_pdf[0] }}" target="_blank">
+                <img
+                  class="h-12 inline"
+                  src="assets/images/iconos/descarga.png"
+                  alt=""
+                />
+                Descargar C.V
+              </a>
             </li>
             <li>
               <img
@@ -113,6 +116,7 @@
         class="space-y-4 border col-span-1 md:col-span-3 border-solid border-gray-300 p-16"
       >
         <h1 class="text-2xl font-parrafo font-bold mb-2">{{ nombre[1] }}</h1>
+        <p class="text-gray-500">{{ cargo[1] }}</p>
         <p class="font-parrafo text-gray-800 text-lg sm:text-2xl text-justify">
           {{ resumen[1] }}
         </p>
@@ -148,12 +152,14 @@
               {{ telefono[1] }}
             </li>
             <li>
-              <img
-                class="h-12 inline"
-                src="assets/images/iconos/descarga.png"
-                alt=""
-              />
-              Descargar C.V
+              <a href="{{ urlRaiz + ruta_pdf[1] }}" target="_blank">
+                <img
+                  class="h-12 inline"
+                  src="assets/images/iconos/descarga.png"
+                  alt=""
+                />
+                Descargar C.V
+              </a>
             </li>
             <li>
               <img
@@ -196,6 +202,7 @@
         class="space-y-4 border col-span-1 md:col-span-3 border-solid border-gray-300 p-16"
       >
         <h1 class="text-2xl font-parrafo font-bold mb-2">{{ nombre[2] }}</h1>
+        <p class="text-gray-500">{{ cargo[2] }}</p>
         <p class="font-parrafo text-gray-800 text-lg sm:text-2xl text-justify">
           {{ resumen[2] }}
         </p>
@@ -231,12 +238,14 @@
               {{ telefono[2] }}
             </li>
             <li>
-              <img
-                class="h-12 inline"
-                src="assets/images/iconos/descarga.png"
-                alt=""
-              />
-              Descargar C.V
+              <a href="{{ urlRaiz + ruta_pdf[2] }}" target="_blank">
+                <img
+                  class="h-12 inline"
+                  src="assets/images/iconos/descarga.png"
+                  alt=""
+                />
+                Descargar C.V
+              </a>
             </li>
             <li>
               <img
@@ -386,16 +395,19 @@
               <h1 class="text-2xl font-titulo font-bold">
                 {{ nombre[0] }}
               </h1>
-              <p class="text-gray-500">Socio</p>
+              <p class="text-gray-500">{{ cargo[0] }}</p>
               <p class="mt-2 font-parrafo">
                 {{ correo[0] }}
                 <br />+(51) {{ telefono[0] }}
               </p>
-              <button
-                class="mt-4 bg-yellow-400 text-white px-4 py-2 font-parrafo"
+              <br />
+              <a
+                href="{{ urlRaiz + ruta_pdf[0] }}"
+                target="_blank"
+                class="mt-7 bg-yellow-400 text-white px-4 py-2 font-parrafo"
               >
                 Descargar C.V
-              </button>
+              </a>
               <hr class="my-4" />
               <h2 class="text-xl font-bold font-subtitulo">
                 Áreas de Práctica:
@@ -654,16 +666,20 @@
               <h1 class="text-2xl font-titulo font-bold">
                 {{ nombre[1] }}
               </h1>
-              <p class="text-gray-500">Socio</p>
+              <p class="text-gray-500">{{ cargo[1] }}</p>
+
               <p class="mt-2 font-parrafo">
                 {{ correo[0] }}
                 <br />+(51) {{ telefono[1] }}
               </p>
-              <button
-                class="mt-4 bg-yellow-400 text-white px-4 py-2 font-parrafo"
+              <br />
+              <a
+                href="{{ urlRaiz + ruta_pdf[1] }}"
+                target="_blank"
+                class="mt-7 bg-yellow-400 text-white px-4 py-2 font-parrafo"
               >
                 Descargar C.V
-              </button>
+              </a>
               <hr class="my-4" />
               <h2 class="text-xl font-bold font-subtitulo">
                 Áreas de Práctica:
@@ -912,16 +928,20 @@
               <h1 class="text-2xl font-titulo font-bold">
                 {{ nombre[2] }}
               </h1>
-              <p class="text-gray-500">Socio</p>
+              <p class="text-gray-500">{{ cargo[2] }}</p>
+
               <p class="mt-2 font-parrafo">
                 {{ correo[2] }}
                 <br />+(51) {{ telefono[2] }}
               </p>
-              <button
-                class="mt-4 bg-yellow-400 text-white px-4 py-2 font-parrafo"
+              <br />
+              <a
+                href="{{ urlRaiz + ruta_pdf[2] }}"
+                target="_blank"
+                class="mt-7 bg-yellow-400 text-white px-4 py-2 font-parrafo"
               >
                 Descargar C.V
-              </button>
+              </a>
               <hr class="my-4" />
               <h2 class="text-xl font-bold font-subtitulo">
                 Áreas de Práctica:
