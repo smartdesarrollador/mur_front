@@ -21,7 +21,9 @@
         />
       </div>
       <h2 class="text-gray-700 text-xl font-medium mb-3">{{ item.titulo }}</h2>
-      <a routerLink="areas/servicio" class="text-base text-[#495565] font-bold"
+      <a
+        (click)="goToDetail(item.id_testimonio)"
+        class="cursor-pointer text-base text-[#495565] font-bold"
         >Ver más</a
       >
     </div>
@@ -35,7 +37,9 @@
         />
       </div>
       <h2 class="text-gray-700 text-xl font-medium mb-3">{{ item.titulo }}</h2>
-      <a routerLink="areas/servicio" class="text-base text-[#495565] font-bold"
+      <a
+        (click)="goToDetail(item.id_testimonio)"
+        class="cursor-pointer text-base text-[#495565] font-bold"
         >Ver más</a
       >
     </div>

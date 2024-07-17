@@ -38,4 +38,8 @@ export class Services2Component implements OnInit {
       this.cdr.detectChanges(); // Forcing change detection might not be strictly necessary here
     });
   }
+
+  goToDetail(id: string): void {
+    this.router.navigate(['/areas/servicio', id]); // Navegar a la ruta con el parámetro 'id'
+  }
 }

@@ -1,12 +1,13 @@
+import {
+  Component,
+  OnInit,
+  ElementRef,
+  ChangeDetectorRef,
+} from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
+import { TestimonioService } from 'src/app/services/testimonio.service';
+import { environment } from 'src/environments/environment';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
-
-interface MenuItem {
-  title: string;
-  description: string;
-  enlace: string;
-}
 
 @Component({
   selector: 'app-menu-lateral',
@@ -15,37 +16,51 @@ interface MenuItem {
   templateUrl: './menu-lateral.component.html',
   styleUrl: './menu-lateral.component.css',
 })
-export class MenuLateralComponent {
-  menuItems: MenuItem[] = [
-    {
-      title: 'Legal Compliance',
-      description:
-        'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.',
-      enlace: 'Ver mas',
-    },
-    {
-      title: 'Corporativo',
-      description: 'Descripción de Corporativo...',
-      enlace: 'Ver mas',
-    },
-    {
-      title: 'Fusiones y Adquisiciones',
-      description: 'Descripción de Fusiones y Adquisiciones...',
-      enlace: 'Ver mas',
-    },
+export class MenuLateralComponent implements OnInit {
+  urlRaiz = environment.urlRaiz + '/';
+  listTestimonios: any[] = [];
 
-    // Add more menu items as needed
-  ];
+  selectedItem: any = null;
 
-  selectedItem: MenuItem | null = null;
-  selectedIndex: number = 0;
+  constructor(
+    private dataService: TestimonioService,
+    private router: Router,
+    private cdr: ChangeDetectorRef,
+    private el: ElementRef
+  ) {}
 
-  ngOnInit() {
-    this.selectItem(0); // Select the first item by default
+  ngOnInit(): void {
+    this.loadTestimonios();
   }
 
-  selectItem(index: number) {
-    this.selectedItem = this.menuItems[index];
-    this.selectedIndex = index;
+  selectItem(item: any) {
+    this.selectedItem = item;
+  }
+
+  /* verMas() {
+    
+    console.log('VER MAS clicked for:', this.selectedItem.title);
+  } */
+
+  loadTestimonios() {
+    this.dataService.getCategories().subscribe((data: any) => {
+      console.log(data);
+      this.listTestimonios = data;
+      if (this.listTestimonios.length > 0) {
+        this.selectedItem = this.listTestimonios[0]; // Select the first item by default
+      }
+      this.cdr.detectChanges();
+    });
+  }
+
+  goToDetail(id: string): void {
+    this.router.navigate(['/areas/servicio', id]); // Navegar a la ruta con el parámetro 'id'
+  }
+
+  truncateText(text: string, limit: number = 1000): string {
+    if (text.length <= limit) {
+      return text;
+    }
+    return text.slice(0, limit) + '.......';
   }
 }

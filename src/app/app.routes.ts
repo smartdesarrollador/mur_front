@@ -87,7 +87,7 @@ export const routes: Routes = [
         component: AreasComponent,
       },
       {
-        path: 'areas/servicio',
+        path: 'areas/servicio/:id',
         component: ServicioComponent,
       },
     ],

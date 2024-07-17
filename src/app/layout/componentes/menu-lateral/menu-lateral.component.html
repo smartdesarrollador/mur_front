@@ -1,28 +1,35 @@
-<div class="flex">
-  <!-- Sidebar -->
-  <div class="w-64 bg-gray-100">
-    <ul class="p-4">
+<div class="grid grid-cols-1 md:flex">
+  <!-- Menu lateral -->
+  <div class="w-80 mr-10 md:border-r-4 border-yellow-300 p-3">
+    <ul>
       <li
-        *ngFor="let item of menuItems; let i = index"
-        class="cursor-pointer py-2 hover:bg-gray-200"
-        [class.bg-gray-300]="i === selectedIndex"
-        (click)="selectItem(i)"
+        *ngFor="let item of listTestimonios"
+        class="cursor-pointer tex-3xl hover:bg-gray-200 font-bold p-2 rounded"
+        (click)="selectItem(item)"
       >
-        {{ item.title }}
+        {{ item.titulo | uppercase }}
       </li>
     </ul>
   </div>
 
-  <!-- Content -->
-  <div class="flex-1 p-8">
-    <h2 class="text-2xl font-bold mb-4">{{ selectedItem?.title }}</h2>
-    <p class="font-parrafo text-lg sm:text-2xl mt-10 text-justify">
-      {{ selectedItem?.description }}
-    </p>
-    <a
-      routerLink="/areas/servicio"
-      class="text-yellow-400 font-parrafo text-lg sm:text-2xl mt-10 text-justify"
-      >{{ selectedItem?.enlace }}</a
-    >
+  <!-- Contenido principal -->
+  <div class="flex-1 p-14 bg-gray-100 rounded-2xl ml-5">
+    <div *ngIf="selectedItem">
+      <h3 class="text-4xl font-bold">{{ selectedItem.titulo }}</h3>
+      <div
+        [innerHTML]="truncateText(selectedItem.descripcion, 1000)"
+        class="mb-5 text-lg sm:text-xl mt-10 text-justify"
+      ></div>
+
+      <button
+        class="text-red-800 font-bold hover:underline mt-4"
+        (click)="goToDetail(selectedItem.id_testimonio)"
+      >
+        VER MAS
+      </button>
+    </div>
+    <div *ngIf="!selectedItem" class="text-center text-gray-500 mt-20">
+      Selecciona un elemento del menú para ver su contenido.
+    </div>
   </div>
 </div>

@@ -21,4 +21,8 @@ export class TestimonioService {
   getCategories(): Observable<Testimonio> {
     return this.http.get(this.urlListar);
   }
+
+  getServicioById(id: number) {
+    return this.http.get(this.urlListar + '/' + id);
+  }
 }
