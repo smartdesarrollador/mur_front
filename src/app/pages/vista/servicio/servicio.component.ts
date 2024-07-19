@@ -6,6 +6,8 @@ import { Testimonio } from 'src/app/models/testimonio.model';
 import { TestimonioService } from 'src/app/services/testimonio.service';
 import { environment } from 'src/environments/environment';
 import { CommonModule } from '@angular/common';
+import { myFunctions } from 'src/app/utils/myFunctions';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-servicio',
@@ -22,7 +24,9 @@ export class ServicioComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private dataService: TestimonioService
+    private dataService: TestimonioService,
+    private myFunctions: myFunctions,
+    private location: Location
   ) {}
 
   ngOnInit(): void {
@@ -32,6 +36,8 @@ export class ServicioComponent implements OnInit {
       console.log(this.id);
       this.loadCategories(this.id);
     });
+
+    this.myFunctions.scrollToTop();
   }
 
   loadCategories(Id: any) {
@@ -39,5 +45,9 @@ export class ServicioComponent implements OnInit {
       console.log(data);
       this.listServicios = data;
     });
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 }

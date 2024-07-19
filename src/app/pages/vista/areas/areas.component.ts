@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Banner1Component } from 'src/app/layout/componentes/banner-1/banner-1.component';
 import { ListImagesComponent } from 'src/app/layout/componentes/list-images/list-images.component';
 import { MenuLateralComponent } from 'src/app/layout/componentes/menu-lateral/menu-lateral.component';
 import { SubtituloParrafo3Component } from 'src/app/layout/componentes/subtitulo-parrafo-3/subtitulo-parrafo-3.component';
+import { myFunctions } from 'src/app/utils/myFunctions';
 
 @Component({
   selector: 'app-areas',
@@ -16,4 +17,10 @@ import { SubtituloParrafo3Component } from 'src/app/layout/componentes/subtitulo
   templateUrl: './areas.component.html',
   styleUrl: './areas.component.css',
 })
-export class AreasComponent {}
+export class AreasComponent implements OnInit {
+  constructor(private myFunctions: myFunctions) {}
+
+  ngOnInit(): void {
+    this.myFunctions.scrollToTop();
+  }
+}
