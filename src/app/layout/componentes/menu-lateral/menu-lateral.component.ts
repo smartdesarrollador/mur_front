@@ -8,44 +8,49 @@ import { Router, RouterLink } from '@angular/router';
 import { TestimonioService } from 'src/app/services/testimonio.service';
 import { environment } from 'src/environments/environment';
 import { CommonModule } from '@angular/common';
+import { QuillModule } from 'ngx-quill';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-menu-lateral',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, QuillModule],
   templateUrl: './menu-lateral.component.html',
-  styleUrl: './menu-lateral.component.css',
+  styleUrls: ['./menu-lateral.component.css'],
 })
 export class MenuLateralComponent implements OnInit {
+  safeHtmlList: SafeHtml[] = [];
   urlRaiz = environment.urlRaiz + '/';
   listTestimonios: any[] = [];
-
   selectedItem: any = null;
 
   constructor(
     private dataService: TestimonioService,
     private router: Router,
     private cdr: ChangeDetectorRef,
-    private el: ElementRef
+    private sanitizer: DomSanitizer
   ) {}
 
   ngOnInit(): void {
     this.loadTestimonios();
   }
 
-  selectItem(item: any) {
+  selectItem(item: any): void {
     this.selectedItem = item;
   }
 
-  /* verMas() {
-    
-    console.log('VER MAS clicked for:', this.selectedItem.title);
-  } */
-
-  loadTestimonios() {
+  loadTestimonios(): void {
     this.dataService.getCategories().subscribe((data: any) => {
       console.log(data);
       this.listTestimonios = data;
+
+      // Sanitizing the HTML descriptions
+      this.safeHtmlList = this.listTestimonios.map((item: any) =>
+        this.sanitizer.bypassSecurityTrustHtml(
+          this.truncateHtml(item.descripcion, 1000)
+        )
+      );
+
       if (this.listTestimonios.length > 0) {
         this.selectedItem = this.listTestimonios[0]; // Select the first item by default
       }
@@ -57,10 +62,42 @@ export class MenuLateralComponent implements OnInit {
     this.router.navigate(['/areas/servicio', id]); // Navegar a la ruta con el parámetro 'id'
   }
 
-  truncateText(text: string, limit: number = 1000): string {
-    if (text.length <= limit) {
-      return text;
-    }
-    return text.slice(0, limit) + '.......';
+  truncateHtml(text: string, limit: number): string {
+    let charCount = 0;
+    let truncatedText = '';
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(text, 'text/html');
+
+    const traverseNodes = (node: Node): boolean => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        if (charCount + node.textContent!.length > limit) {
+          truncatedText +=
+            node.textContent!.substring(0, limit - charCount) + '...';
+          charCount = limit;
+          return false; // Stop traversal
+        } else {
+          truncatedText += node.textContent;
+          charCount += node.textContent!.length;
+        }
+      } else if (node.nodeType === Node.ELEMENT_NODE) {
+        truncatedText += `<${(node as Element).tagName.toLowerCase()}`;
+        const attributes = (node as Element).attributes;
+        for (let i = 0; i < attributes.length; i++) {
+          truncatedText += ` ${attributes[i].name}="${attributes[i].value}"`;
+        }
+        truncatedText += '>';
+        const children = node.childNodes;
+        for (let i = 0; i < children.length; i++) {
+          if (!traverseNodes(children[i])) {
+            return false; // Stop traversal
+          }
+        }
+        truncatedText += `</${(node as Element).tagName.toLowerCase()}>`;
+      }
+      return true; // Continue traversal
+    };
+
+    traverseNodes(doc.body);
+    return truncatedText;
   }
 }

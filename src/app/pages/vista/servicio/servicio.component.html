@@ -17,16 +17,19 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Left column -->
         <div class="space-y-6">
-          <div
-            [innerHTML]="listServicios.descripcion"
-            class="text-lg md:text-xl my-5 text-justify"
-          ></div>
-          <button
-            (click)="goBack()"
-            class="px-4 py-2 bg-yellow-300 text-white rounded hover:bg-yellow-400 transition duration-300"
-          >
-            atrás
-          </button>
+          <!-- <div
+            [innerHTML]="safeHtml"
+            class="text-lg md:text-xl my-5"
+          ></div> -->
+          <div class="ql-container ql-snow" style="border-width: 0">
+            <div class="ql-editor" [innerHTML]="safeHtml"></div>
+            <button
+              (click)="goBack()"
+              class="px-4 py-2 bg-yellow-300 text-white rounded hover:bg-yellow-400 transition duration-300"
+            >
+              atrás
+            </button>
+          </div>
         </div>
         <!-- Right column -->
         <div class="flex flex-col items-center space-y-8 mt-10">

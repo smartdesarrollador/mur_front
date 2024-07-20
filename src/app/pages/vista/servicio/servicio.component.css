@@ -1,0 +1,8 @@
+ol {
+  list-style-type: decimal !important; /* Asegura que las listas ordenadas usen números */
+  padding-left: 20px !important; /* Asegura que haya suficiente espacio a la izquierda para los números */
+}
+
+li {
+  margin-bottom: 10px !important; /* Añade algo de espacio entre los elementos de la lista para mejorar la legibilidad */
+}
