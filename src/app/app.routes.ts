@@ -27,6 +27,8 @@ import { NuestroEquipo5Component } from './pages/vista/nuestro-equipo/nuestro-eq
 import { NuestroEquipo6Component } from './pages/vista/nuestro-equipo/nuestro-equipo-6/nuestro-equipo-6.component';
 import { AreasComponent } from './pages/vista/areas/areas.component';
 import { ServicioComponent } from './pages/vista/servicio/servicio.component';
+import { SalaPrensaComponent } from './pages/vista/publicaciones/sala-prensa/sala-prensa.component';
+import { InformativoComponent } from './pages/vista/publicaciones/informativo/informativo.component';
 
 export const routes: Routes = [
   {
@@ -89,6 +91,14 @@ export const routes: Routes = [
       {
         path: 'areas/servicio/:id',
         component: ServicioComponent,
+      },
+      {
+        path: 'publicaciones/sala-de-prensa',
+        component: SalaPrensaComponent,
+      },
+      {
+        path: 'publicaciones/informativo',
+        component: InformativoComponent,
       },
     ],
   },
