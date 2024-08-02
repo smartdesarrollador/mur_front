@@ -1,0 +1,32 @@
+<div class="grid grid-cols-1 md:grid-cols-2 gap-y-10">
+  <div *ngFor="let item of listInformativos" class="w-full mb-7">
+    <div
+      class="max-w-sm mx-auto bg-gray-100 rounded-lg shadow-md overflow-hidden"
+    >
+      <!-- Image Section -->
+      <div class="relative">
+        <img
+          class="w-full h-48 object-cover"
+          src="{{ urlRaiz + item.ruta_imagen }}"
+          alt="Business meeting"
+        />
+      </div>
+      <!-- Content Section -->
+      <div class="p-4">
+        <h2 class="text-3xl text-center font-bold mt-5 text-gray-800 p-4">
+          {{ item.titulo }}
+        </h2>
+        {{ item.resumen }}
+        <div class="mt-4 flex justify-center">
+          <a
+            href="#"
+            target="_blank"
+            class="bg-yellow-300 hover:bg-yellow-400 text-white font-bold py-2 mb-5 px-4 rounded-lg"
+          >
+            Ver mas...
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
