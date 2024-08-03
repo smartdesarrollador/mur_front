@@ -1,0 +1,33 @@
+<app-banner-3></app-banner-3>
+<div class="container w-[90%] mx-auto my-10">
+  <div class="grid grid-cols-1 md:grid-cols-5">
+    <div class="col-span-1 md:col-span-3 bg-gray-50 p-10 rounded-md">
+      <img
+        class="w-full rounded-md mb-7"
+        src="{{ urlRaiz + listInformativos.ruta_imagen }}"
+        alt=""
+      />
+
+      <h2
+        class="text-xl sm:text-2xl md:text-3xl text-gray-700 font-semibold my-10 font-subtitulo border-b-8 inline border-yellow-300"
+      >
+        {{ listInformativos.titulo }}
+      </h2>
+      <br />
+      <div class="my-4 grid grid-cols-3">
+        <div>
+          Fecha: {{ listInformativos.created_at | date : "dd-MM-yyyy" }}
+        </div>
+        <div></div>
+        <div>Autor: {{ listInformativos.autor }}</div>
+      </div>
+
+      <div class="ql-container ql-snow" style="border-width: 0">
+        <div class="ql-editor" [innerHTML]="safeHtml"></div>
+      </div>
+    </div>
+    <div class="col-span-1 md:col-span-2 p-4 rounded-md">
+      <app-mas-noticias></app-mas-noticias>
+    </div>
+  </div>
+</div>

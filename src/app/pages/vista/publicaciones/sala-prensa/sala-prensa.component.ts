@@ -9,7 +9,11 @@ import { Router, RouterLink } from '@angular/router';
 import { SalaService } from 'src/app/services/sala.service';
 import { environment } from 'src/environments/environment';
 import { CommonModule } from '@angular/common';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import {
+  DomSanitizer,
+  SafeHtml,
+  SafeResourceUrl,
+} from '@angular/platform-browser';
 import { QuillModule } from 'ngx-quill';
 import { Banner3Component } from 'src/app/layout/componentes/banner-3/banner-3.component';
 
@@ -51,5 +55,19 @@ export class SalaPrensaComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     // No need to call initializeSlick here (handled in loadSalas)
+  }
+
+  getSanitizedUrl(url: string): SafeResourceUrl {
+    const videoId = this.extractVideoId(url);
+    return this.sanitizer.bypassSecurityTrustResourceUrl(
+      `https://www.youtube.com/embed/${videoId}`
+    );
+  }
+
+  extractVideoId(url: string): string {
+    const videoIdMatch = url.match(
+      /(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?v=([^&]+)|youtu\.be\/([^&]+)/
+    );
+    return videoIdMatch ? videoIdMatch[1] || videoIdMatch[2] : '';
   }
 }

@@ -20,6 +20,10 @@ export class InformativoService {
   urlDelete = environment.apiDeleteFileInformativo;
   constructor(private http: HttpClient) {}
 
+  getInformativoById(id: number) {
+    return this.http.get(this.urlListar + '/' + id);
+  }
+
   getInformativos(): Observable<Informativo> {
     return this.http.get(this.urlListar);
   }

@@ -34,7 +34,7 @@ export class NoticiasComponent implements OnInit {
   onDetail(dataInformativo: Informativo) {
     console.log(dataInformativo);
     this.dataService.selectCategory = Object.assign({}, dataInformativo);
-    this.router.navigate(['/detalle'], {
+    this.router.navigate(['/publicaciones/informativo/detalle'], {
       queryParams: { Id: dataInformativo.id_informativo },
     });
   }

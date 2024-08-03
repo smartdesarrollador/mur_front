@@ -8,4 +8,5 @@ export class Informativo {
   ruta_imagen?: string;
   autor?: string;
   destacado?: string;
+  created_at?: string;
 }
