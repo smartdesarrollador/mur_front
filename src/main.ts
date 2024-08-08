@@ -2,6 +2,15 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
 
+/* 4.- TRANSLATE-V1; */
+import { enableProdMode } from '@angular/core';
+import { environment } from './environments/environment';
+
+if (environment.production) {
+  enableProdMode();
+}
+/* /4.- TRANSLATE-V1; */
+
 bootstrapApplication(AppComponent, appConfig).catch((err) =>
   console.error(err)
 );
