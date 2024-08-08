@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { initFlowbite } from 'flowbite';
 import { RouterOutlet } from '@angular/router';
+/* 7.- TRANSLATE-V1; */
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+/* /7.- TRANSLATE-V1; */
 
 import { NavbarBasicoComponent } from 'src/app/layout/componentes/navbar-basico/navbar-basico.component';
 import { DropdownBasicoComponent } from 'src/app/layout/componentes/dropdown-basico/dropdown-basico.component';
@@ -27,6 +30,9 @@ import { FooterLogoComponent } from 'src/app/layout/componentes/footer-logo/foot
   standalone: true,
   imports: [
     RouterOutlet,
+    /* 8.- TRANSLATE-V1; */
+    TranslateModule,
+    /* /8.- TRANSLATE-V1; */
     NavbarBasicoComponent,
     DropdownBasicoComponent,
     ModalBasicoComponent,
@@ -51,5 +57,14 @@ import { FooterLogoComponent } from 'src/app/layout/componentes/footer-logo/foot
   styleUrl: './vista.component.css',
 })
 export class VistaComponent implements OnInit {
+  constructor(
+    /* 9.- TRANSLATE-V1; */
+    private translate: TranslateService /* /9.- TRANSLATE-V1; */
+  ) {
+    /* 10.- TRANSLATE-V1; */
+    this.translate.addLangs(['en', 'es']);
+    this.translate.setDefaultLang('es');
+    /* /10.- TRANSLATE-V1; */
+  }
   ngOnInit(): void {}
 }
