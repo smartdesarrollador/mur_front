@@ -13,26 +13,27 @@
       <div
         class="grid grid-cols-2 gap-8 pl-20 sm:gap-6 sm:grid-cols-3 font-subtitulo text-white"
       >
-        <!-- 18.- TRANSLATE-V1 -->
-
-        <div>
-          <h1>{{ "HELLO" | translate }}</h1>
-          <p>{{ "GREETING" | translate }}</p>
-        </div>
-        <!-- /18.- TRANSLATE-V1 -->
         <div>
           <ul class="">
             <li class="mb-4">
-              <a href="#" class="hover:underline">El Estudio</a>
+              <a href="#" class="hover:underline">{{
+                "LINK_ESTUDIO" | translate
+              }}</a>
             </li>
             <li class="mb-4">
-              <a href="#" class="hover:underline">El Equipo</a>
+              <a href="#" class="hover:underline">{{
+                "LINK_EQUIPO" | translate
+              }}</a>
             </li>
             <li class="mb-4">
-              <a href="#" class="hover:underline">Noticias</a>
+              <a href="#" class="hover:underline">{{
+                "LINK_NOTICIAS" | translate
+              }}</a>
             </li>
             <li class="mb-4">
-              <a href="#" class="hover:underline">Conócenos</a>
+              <a href="#" class="hover:underline">{{
+                "LINK_CONOCEMOS" | translate
+              }}</a>
             </li>
           </ul>
         </div>
@@ -92,10 +93,10 @@
     <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
     <div class="sm:flex sm:items-center sm:justify-center">
       <span class="text-sm sm:text-lg text-white sm:text-center mr-10"
-        >Política de privacidad
+        >{{ "POLITICA_PRIVACIDAD" | translate }}
       </span>
       <span class="text-sm sm:text-lg text-white sm:text-center"
-        >Política de Cookies
+        >{{ "POLITICA_COOKIES" | translate }}
       </span>
       <div class="flex mt-4 sm:justify-center sm:mt-0"></div>
     </div>

@@ -18,11 +18,11 @@ import { Post2Component } from 'src/app/layout/componentes/post-2/post-2.compone
 import { PostGridComponent } from 'src/app/layout/componentes/post-grid/post-grid.component';
 import { Galeria1Component } from 'src/app/layout/componentes/galeria-1/galeria-1.component';
 import { Header1Component } from 'src/app/layout/componentes/header-1/header-1.component';
-import { Jumbotron1Component } from 'src/app/layout/componentes/jumbotron-1/jumbotron-1.component';
+
 import { Subscribe1Component } from 'src/app/layout/componentes/subscribe-1/subscribe-1.component';
 import { CarouselOwl1Component } from 'src/app/layout/componentes/carousel-owl-1/carousel-owl-1.component';
 import { Header2Component } from 'src/app/layout/componentes/header-2/header-2.component';
-import { BannerContenido1Component } from 'src/app/layout/componentes/banner-contenido-1/banner-contenido-1.component';
+
 import { FooterLogoComponent } from 'src/app/layout/componentes/footer-logo/footer-logo.component';
 
 @Component({
@@ -46,11 +46,9 @@ import { FooterLogoComponent } from 'src/app/layout/componentes/footer-logo/foot
     PostGridComponent,
     Galeria1Component,
     Header1Component,
-    Jumbotron1Component,
     Subscribe1Component,
     CarouselOwl1Component,
     Header2Component,
-    BannerContenido1Component,
     FooterLogoComponent,
   ],
   templateUrl: './vista.component.html',

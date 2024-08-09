@@ -6,11 +6,17 @@ import { Producto } from 'src/app/models/producto.model';
 import { ProductoService } from 'src/app/services/producto.service';
 import { environment } from 'src/environments/environment';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-nuestro-equipo',
   standalone: true,
-  imports: [RouterLink, CommonModule, BannerContenido3Component],
+  imports: [
+    RouterLink,
+    CommonModule,
+    TranslateModule,
+    BannerContenido3Component,
+  ],
   templateUrl: './nuestro-equipo.component.html',
   styleUrl: './nuestro-equipo.component.css',
 })

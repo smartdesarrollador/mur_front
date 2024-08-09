@@ -5,13 +5,12 @@
     <h2
       class="text-2xl sm:text-3xl md:text-4xl text-gray-700 font-semibold mb-4 leading-snug font-subtitulo border-b-4 inline border-yellow-400"
     >
-      CONTACTE CON NOSOTROS
+      {{ "TITULO_CONTACTO" | translate }}
     </h2>
     <p
       class="mb-2 font-parrafo text-gray-800 text-lg sm:text-2xl mt-10 text-justify"
     >
-      ¿Tienes dudas y/o consultas? Déjanos un mensaje y te contactaremos para
-      brindarte más información.
+      ¿{{ "TITULO_DESCRIPCION_CONTACTO" | translate }}
     </p>
     <img src="assets/images/img_contact_2.png" class="" alt="" />
   </div>
@@ -22,9 +21,9 @@
       <div class="mb-5">
         <input
           type="text"
-          id="email"
+          id="nombre"
           class="bg-[#f3f3f3] p-5 text-gray-500 text-xl block w-full p-2.5 placeholder-gray-300 border-white focus:border-white"
-          placeholder="NOMBRE COMPLETO"
+          [placeholder]="'PLACEHOLDER_NOMBRE' | translate"
           required
         />
       </div>
@@ -33,7 +32,7 @@
           type="email"
           id="email"
           class="bg-[#f3f3f3] p-5 text-gray-500 text-xl block w-full p-2.5 placeholder-gray-300 border-white focus:border-white"
-          placeholder="CORREO ELECTRÓNICO"
+          [placeholder]="'PLACEHOLDER_CORREO' | translate"
           required
         />
       </div>
@@ -42,7 +41,7 @@
           type="text"
           id="email"
           class="bg-[#f3f3f3] p-5 text-gray-500 text-xl block w-full p-2.5 placeholder-gray-300 border-white focus:border-white"
-          placeholder="TELÉFONO"
+          [placeholder]="'PLACEHOLDER_TELEFONO' | translate"
           required
         />
       </div>
@@ -51,7 +50,7 @@
           type="text"
           id="email"
           class="bg-[#f3f3f3] p-5 text-gray-500 text-xl block w-full p-2.5 placeholder-gray-300 border-white focus:border-white"
-          placeholder="ASUNTO"
+          [placeholder]="'PLACEHOLDER_ASUNTO' | translate"
           required
         />
       </div>
@@ -60,14 +59,14 @@
           id="message"
           rows="4"
           class="block p-2.5 w-full text-xl text-gray-500 bg-[#f3f3f3] p-5 placeholder-gray-300 border-white focus:border-white"
-          placeholder="MENSAJE"
+          [placeholder]="'PLACEHOLDER_MENSAJE' | translate"
         ></textarea>
       </div>
       <button
         type="submit"
         class="text-center bg-yellow-300 text-white px-7 py-3 hover:bg-yellow-400"
       >
-        ENVIAR
+        {{ "ENVIAR_FORM" | translate }}
       </button>
     </form>
   </div>

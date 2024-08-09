@@ -5,11 +5,12 @@ import { Upload } from 'src/app/models/upload.model';
 import { UploadService } from 'src/app/services/upload.service';
 import { environment } from 'src/environments/environment';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-banner-contenido-1',
   standalone: true,
-  imports: [CarouselModule, CommonModule],
+  imports: [CarouselModule, CommonModule, TranslateModule],
   templateUrl: './banner-contenido-1.component.html',
   styleUrl: './banner-contenido-1.component.css',
 })

@@ -8,11 +8,12 @@ import { Router, RouterLink } from '@angular/router';
 import { TestimonioService } from 'src/app/services/testimonio.service';
 import { environment } from 'src/environments/environment';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-services-2',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, TranslateModule],
   templateUrl: './services-2.component.html',
   styleUrl: './services-2.component.css',
 })

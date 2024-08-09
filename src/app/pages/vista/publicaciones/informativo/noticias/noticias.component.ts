@@ -4,11 +4,12 @@ import { Informativo } from 'src/app/models/informativo.model';
 import { InformativoService } from 'src/app/services/informativo.service';
 import { environment } from 'src/environments/environment';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-noticias',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, TranslateModule, RouterLink],
   templateUrl: './noticias.component.html',
   styleUrl: './noticias.component.css',
 })

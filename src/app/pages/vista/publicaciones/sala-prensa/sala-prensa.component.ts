@@ -16,11 +16,18 @@ import {
 } from '@angular/platform-browser';
 import { QuillModule } from 'ngx-quill';
 import { Banner3Component } from 'src/app/layout/componentes/banner-3/banner-3.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-sala-prensa',
   standalone: true,
-  imports: [CommonModule, RouterLink, QuillModule, Banner3Component],
+  imports: [
+    CommonModule,
+    RouterLink,
+    QuillModule,
+    TranslateModule,
+    Banner3Component,
+  ],
   templateUrl: './sala-prensa.component.html',
   styleUrl: './sala-prensa.component.css',
 })
