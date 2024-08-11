@@ -10,11 +10,12 @@ import { environment } from 'src/environments/environment';
 import { CommonModule } from '@angular/common';
 import { QuillModule } from 'ngx-quill';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-menu-lateral',
   standalone: true,
-  imports: [CommonModule, RouterLink, QuillModule],
+  imports: [CommonModule, TranslateModule, RouterLink, QuillModule],
   templateUrl: './menu-lateral.component.html',
   styleUrls: ['./menu-lateral.component.css'],
 })

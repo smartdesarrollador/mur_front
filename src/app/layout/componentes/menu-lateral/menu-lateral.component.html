@@ -27,7 +27,7 @@
         class="text-red-800 font-bold hover:underline mt-4"
         (click)="goToDetail(selectedItem.id_testimonio)"
       >
-        VER MAS
+        {{ "VER_MAS_MAYUSCULA" | translate }}
       </button>
     </div>
     <div *ngIf="!selectedItem" class="text-center text-gray-500 mt-20">

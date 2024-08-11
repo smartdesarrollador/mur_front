@@ -10,12 +10,14 @@ import { myFunctions } from 'src/app/utils/myFunctions';
 import { Location } from '@angular/common';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { QuillModule } from 'ngx-quill';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-servicio',
   standalone: true,
   imports: [
     CommonModule,
+    TranslateModule,
     Banner2Component,
     SubtituloParrafo4Component,
     QuillModule,
