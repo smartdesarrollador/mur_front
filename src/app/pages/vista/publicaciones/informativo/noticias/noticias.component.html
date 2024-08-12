@@ -21,16 +21,12 @@
       </div>
       <!-- Content Section -->
       <div class="p-4">
-        <h2 class="text-3xl text-center font-bold mt-1 text-gray-800 p-4">
-          {{
-            item.titulo.length > 40
-              ? (item.titulo | slice : 0 : 40) + "..."
-              : item.titulo
-          }}
+        <h2 class="text-xl font-bold mt-1 text-gray-800 py-4">
+          {{ item.titulo }}
         </h2>
         {{
-          item.resumen.length > 180
-            ? (item.resumen | slice : 0 : 180) + "..."
+          item.resumen.length > 130
+            ? (item.resumen | slice : 0 : 130) + "..."
             : item.resumen
         }}
 
