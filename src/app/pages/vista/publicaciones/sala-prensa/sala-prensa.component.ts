@@ -17,6 +17,7 @@ import {
 import { QuillModule } from 'ngx-quill';
 import { Banner3Component } from 'src/app/layout/componentes/banner-3/banner-3.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @Component({
   selector: 'app-sala-prensa',
@@ -26,12 +27,14 @@ import { TranslateModule } from '@ngx-translate/core';
     RouterLink,
     QuillModule,
     TranslateModule,
+    NgxPaginationModule,
     Banner3Component,
   ],
   templateUrl: './sala-prensa.component.html',
   styleUrl: './sala-prensa.component.css',
 })
 export class SalaPrensaComponent implements OnInit, AfterViewInit {
+  p: number = 1;
   safeHtmlList: SafeHtml[] = [];
   urlRaiz = environment.urlRaiz + '/';
   listSalas: any[] = []; // Initialize as empty array

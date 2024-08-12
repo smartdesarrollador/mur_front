@@ -108,3 +108,10 @@ body {
     animation-delay: 4s;
   }
 }
+
+/* 7.- PAGINATION-V1 */
+.ngx-pagination .current {
+  /* color de relleno del numero de la pagina seleccionada */
+  background: #faca15 !important;
+}
+/* /7.- PAGINATION-V1 */

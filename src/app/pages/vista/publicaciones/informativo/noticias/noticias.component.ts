@@ -5,15 +5,28 @@ import { InformativoService } from 'src/app/services/informativo.service';
 import { environment } from 'src/environments/environment';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+/* 2.- PAGINATION-V1 */
+import { NgxPaginationModule } from 'ngx-pagination';
+/* /2.- PAGINATION-V1 */
 
 @Component({
   selector: 'app-noticias',
   standalone: true,
-  imports: [CommonModule, TranslateModule, RouterLink],
+  imports: [
+    CommonModule,
+    TranslateModule,
+    RouterLink,
+    /* 3.- PAGINATION-V1 */
+    NgxPaginationModule,
+    /* /3.- PAGINATION-V1 */
+  ],
   templateUrl: './noticias.component.html',
   styleUrl: './noticias.component.css',
 })
 export class NoticiasComponent implements OnInit {
+  /* 4.- PAGINATION-V1 */
+  p: number = 1;
+  /* /4.- PAGINATION-V1 */
   urlRaiz = environment.urlRaiz + '/';
   listInformativos: any = [];
   constructor(

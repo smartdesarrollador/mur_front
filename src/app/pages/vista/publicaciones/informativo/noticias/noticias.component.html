@@ -1,5 +1,13 @@
 <div class="grid grid-cols-1 md:grid-cols-2 gap-y-10">
-  <div *ngFor="let item of listInformativos" class="w-full mb-7">
+  <!-- 5.- PAGINATION-V1 -->
+  <div
+    *ngFor="
+      let item of listInformativos
+        | paginate : { itemsPerPage: 4, currentPage: p }
+    "
+    class="w-full mb-7"
+  >
+    <!-- /5.- PAGINATION-V1 -->
     <div
       class="max-w-sm mx-auto bg-gray-100 rounded-lg shadow-md overflow-hidden"
     >
@@ -25,6 +33,7 @@
             ? (item.resumen | slice : 0 : 180) + "..."
             : item.resumen
         }}
+
         <div class="mt-4 flex justify-center">
           <a
             (click)="onDetail(item)"
@@ -38,3 +47,12 @@
     </div>
   </div>
 </div>
+<!-- 6.- PAGINATION-V1 -->
+<div class="flex items-center justify-center">
+  <pagination-controls
+    (pageChange)="p = $event"
+    previousLabel="Anterior"
+    nextLabel="Siguiente"
+  ></pagination-controls>
+</div>
+<!-- /6.- PAGINATION-V1 -->

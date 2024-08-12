@@ -26,7 +26,10 @@
 
   <div class="flex my-14 flex-wrap">
     <div
-      *ngFor="let item of listSalas; let i = index"
+      *ngFor="
+        let item of listSalas | paginate : { itemsPerPage: 6, currentPage: p };
+        let i = index
+      "
       class="w-full md:w-1/3 mb-14"
     >
       <div
@@ -70,5 +73,12 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="flex items-center justify-center">
+    <pagination-controls
+      (pageChange)="p = $event"
+      previousLabel="Anterior"
+      nextLabel="Siguiente"
+    ></pagination-controls>
   </div>
 </div>
