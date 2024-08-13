@@ -1,3 +1,4 @@
+/* 6.- CRUD-BASICO-V1-P3 */
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { initFlowbite } from 'flowbite';
@@ -75,3 +76,4 @@ export class NuestroEquipoComponent implements OnInit {
     });
   }
 }
+/* /6.- CRUD-BASICO-V1-P3 */

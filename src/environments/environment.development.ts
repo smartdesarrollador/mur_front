@@ -20,6 +20,7 @@ export const environment = {
   apiListarFilesCarousel: 'http://127.0.0.1:8000/api/carousel/listar/files',
   apiDeleteFileCarousel: 'http://127.0.0.1:8000/api/carousel/update/upload',
   apiListarFilesTestimonio: 'http://127.0.0.1:8000/api/testimonios',
+  /* 3.- CRUD-BASICO-V1-P3 */
   apiListarFilesProducto: 'http://127.0.0.1:8000/api/productos',
   apiListarCursosProducto: 'http://127.0.0.1:8000/api/productos/cursos',
   apiListarEspecialidadesProducto:
@@ -28,6 +29,7 @@ export const environment = {
   apiUrl3Producto: 'http://127.0.0.1:8000/api/productos/subir',
   apiUpdateFileProducto: 'http://127.0.0.1:8000/api/productos/update',
   apiDeleteFileProducto: 'http://127.0.0.1:8000/api/productos',
+  /* /3.- CRUD-BASICO-V1-P3 */
   apiUrl3Banner: 'http://127.0.0.1:8000/api/banners/subir',
   apiUpdateFileBanner: 'http://127.0.0.1:8000/api/banners/update',
   apiListarFilesBanner: 'http://127.0.0.1:8000/api/banners',

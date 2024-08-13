@@ -1,3 +1,4 @@
+/* 2.- CRUD-BASICO-V1-P3 */
 export class Producto {
   id_producto?: number;
   nombre?: string;
@@ -16,3 +17,4 @@ export class Producto {
   observacion?: string;
   duracion?: string;
 }
+/* /2.- CRUD-BASICO-V1-P3 */
