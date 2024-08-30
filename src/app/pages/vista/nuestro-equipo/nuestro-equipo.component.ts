@@ -8,6 +8,7 @@ import { ProductoService } from 'src/app/services/producto.service';
 import { environment } from 'src/environments/environment';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @Component({
   selector: 'app-nuestro-equipo',
@@ -17,11 +18,13 @@ import { TranslateModule } from '@ngx-translate/core';
     CommonModule,
     TranslateModule,
     BannerContenido3Component,
+    NgxPaginationModule,
   ],
   templateUrl: './nuestro-equipo.component.html',
   styleUrl: './nuestro-equipo.component.css',
 })
 export class NuestroEquipoComponent implements OnInit {
+  p: number = 1;
   urlRaiz = environment.urlRaiz + '/';
   listBanners: any = [];
 
@@ -38,6 +41,10 @@ export class NuestroEquipoComponent implements OnInit {
   ruta_pdf: string[] = [];
   categoria_producto_id: number[] = [];
 
+  selectedModalIndex: number | null = null;
+  activeIndex: number | null = null;
+  activeIndex2: number | null = null;
+
   constructor(private dataService: ProductoService, private router: Router) {}
 
   ngOnInit(): void {
@@ -51,6 +58,22 @@ export class NuestroEquipoComponent implements OnInit {
       this.listBanners = data;
       this.populateBannerData();
     });
+  }
+
+  openModal(index: number) {
+    this.selectedModalIndex = index;
+  }
+
+  closeModal() {
+    this.selectedModalIndex = null;
+  }
+
+  toggleAccordion(index: number): void {
+    this.activeIndex = this.activeIndex === index ? null : index;
+  }
+
+  toggleAccordion2(index: number): void {
+    this.activeIndex2 = this.activeIndex2 === index ? null : index;
   }
 
   populateBannerData() {
