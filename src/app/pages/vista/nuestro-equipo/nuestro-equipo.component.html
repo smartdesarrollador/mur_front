@@ -13,242 +13,126 @@
       {{ "DESCRIPCION_NUESTRO_EQUIPO" | translate }}
     </p>
 
-    <div
-      *ngFor="
-        let item of listBanners
-          | paginate : { itemsPerPage: 4, currentPage: p };
-        let i = index
-      "
-      class="grid grid-cols-1 md:grid-cols-7 gap-0 border border-solid border-gray-300 my-14"
-    >
-      <!-- Primera columna con imagen -->
-      <div class="border col-span-1 md:col-span-2 border-solid border-gray-300">
-        <img
-          src="{{ urlRaiz + item.ruta_imagen }}"
-          alt="Imagen"
-          class="w-full h-full object-cover"
-        />
-      </div>
-
-      <!-- Segunda columna con título y descripción -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
       <div
-        class="space-y-4 border col-span-1 md:col-span-3 border-solid border-gray-300 p-16"
+        *ngFor="
+          let item of listBanners
+            | paginate : { itemsPerPage: 12, currentPage: p };
+          let i = index
+        "
+        class="flex flex-col bg-gray-100 rounded-lg p-6 shadow-lg space-y-4 w-full mx-auto my-8"
       >
-        <h1 class="text-2xl font-parrafo font-bold mb-2">{{ item.nombre }}</h1>
-        <p class="text-gray-500">{{ item.cargo }}</p>
-        <p class="font-parrafo text-gray-800 text-lg sm:text-2xl text-justify">
-          {{ item.resumen }}
-        </p>
-        <p>
-          <a
-            class="cursor-pointer font-parrafo text-yellow-400 text-lg sm:text-2xl"
-            (click)="openModal(i)"
-            >Leer más</a
-          >
-        </p>
-      </div>
-
-      <!-- Tercera columna con lista -->
-      <div
-        class="border col-span-1 md:col-span-2 border-solid border-gray-300 p-10 bg-gray-600"
-      >
-        <div class="flex items-center justify-center h-full">
-          <ul class="space-y-4 font-parrafo text-white text-lg sm:text-2xl">
-            <li>
-              <img
-                class="h-12 inline"
-                src="assets/images/iconos/correo.png"
-                alt=""
-              />
-              {{ item.correo }}
-            </li>
-            <li>
-              <img
-                class="h-12 inline"
-                src="assets/images/iconos/celular.png"
-                alt=""
-              />
-              {{ item.telefono }}
-            </li>
-          </ul>
+        <!-- Imagen de perfil -->
+        <div class="w-full">
+          <img
+            src="{{ urlRaiz + item.ruta_imagen }}"
+            alt="Imagen de perfil"
+            class="w-full h-auto object-cover rounded-t-lg"
+          />
         </div>
-      </div>
 
-      <!-- Modal -->
-      <div
-        class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50"
-        *ngIf="selectedModalIndex === i"
-      >
-        <div
-          class="relative top-10 mx-auto p-5 w-[80%] sm:w-[70%] rounded-md bg-white"
+        <!-- Nombre y cargo -->
+        <div class="text-center">
+          <h1 class="text-2xl font-semibold">{{ item.nombre }}</h1>
+          <p class="text-blue-500">{{ item.cargo }}</p>
+        </div>
+
+        <!-- Íconos de contacto -->
+        <div class="flex justify-center space-x-4 mt-4">
+          <a href="mailto:{{ item.correo }}" target="_blank">
+            <img
+              class="h-8 w-8"
+              src="assets/images/iconos/correo.png"
+              alt="Email"
+            />
+          </a>
+          <a href="{{ item.telefono }}" target="_blank">
+            <img
+              class="h-8 w-8"
+              src="assets/images/iconos/celular.png"
+              alt="LinkedIn"
+            />
+          </a>
+        </div>
+        <a
+          class="cursor-pointer font-parrafo text-center text-[#156180] text-lg sm:text-lg"
+          (click)="openModal(i)"
+          >Leer más</a
         >
-          <!-- Close Button -->
-          <button
-            class="absolute text-4xl top-0 right-0 mt-2 mr-2 text-gray-500 hover:text-gray-700"
-            (click)="closeModal()"
+
+        <!-- Modal -->
+        <div
+          class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full z-50"
+          *ngIf="selectedModalIndex === i"
+        >
+          <div
+            class="relative top-10 mx-auto p-5 w-[80%] sm:w-[70%] rounded-md"
           >
-            &times;
-          </button>
-
-          <div class="mt-3 sm:m-10">
-            <!-- Modal content -->
-            <div class="dark:bg-gray-700">
-              <!-- Modal header -->
-
-              <!-- Modal body -->
-
-              <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
-                <!-- Columna de la Imagen -->
-                <div class="md:col-span-2 flex flex-col items-center">
-                  <img
-                    src="{{ urlRaiz + item.ruta_imagen }}"
-                    alt="Imagen de perfil"
-                    class=""
-                  />
-                  <p class="italic text-center font-parrafo py-5">
-                    "Siempre disponible para cualquier consulta y preocupado por
-                    obtener el mejor resultado para sus clientes"
-                  </p>
-                </div>
-
-                <!-- Columna de Información Personal -->
-                <div class="md:col-span-3 p-10">
-                  <h1 class="text-2xl font-titulo font-bold">
-                    {{ item.nombre }}
-                  </h1>
-                  <p class="text-gray-500">{{ item.cargo }}</p>
-                  <p class="mt-2 font-parrafo">
-                    {{ item.correo }}
-                    <br />+(51) {{ item.telefono }}
-                  </p>
-                  <br />
-                  <a
-                    href="{{ urlRaiz + item.ruta_pdf }}"
-                    target="_blank"
-                    class="mt-7 bg-yellow-400 text-white px-4 py-2 font-parrafo"
-                  >
-                    Descargar C.V
-                  </a>
-                  <hr class="my-4" />
-                  <h2 class="text-xl font-bold font-subtitulo">
-                    Áreas de Práctica:
-                  </h2>
-                  <p class="mt-2 font-parrafo">
-                    Corporativo / Fusiones y Adquisiciones, Proyectos e
-                    Infraestructura, Derecho de Finanzas, Mercado de Capitales,
-                    Titulizaciones y Fondos de Inversión
-                  </p>
-                  <h2 class="text-xl font-bold mt-4 font-subtitulo">
-                    Descripción:
-                  </h2>
-
-                  <div class="mt-2 text-justify font-parrafo">
-                    {{ item.resumen }}
-                  </div>
-
-                  <button
-                    class="w-full flex justify-between items-center bg-yellow-400 text-white p-2 mb-4"
-                    (click)="toggleAccordion(i)"
-                  >
-                    Más informacion
-                    <span [ngClass]="{ 'rotate-180': activeIndex === i }"
-                      >▼</span
-                    >
-                  </button>
+            <div class="mt-3 sm:m-10">
+              <!-- Modal content -->
+              <div class="dark:bg-gray-700">
+                <!-- Modal body -->
+                <div class="grid grid-cols-1 gap-6">
                   <div
-                    *ngIf="activeIndex === i"
-                    class="bg-white text-gray-800 p-4 transition-all duration-300 mb-4"
+                    class="relative bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto"
                   >
-                    <div [innerHTML]="item.descripcion" class="mb-5"></div>
-                  </div>
-
-                  <button
-                    class="w-full flex justify-between items-center bg-yellow-400 text-white p-2"
-                    (click)="toggleAccordion2(i)"
-                  >
-                    Publicaciones o noticias
-                    <span [ngClass]="{ 'rotate-180': activeIndex2 === i }"
-                      >▼</span
+                    <!-- Close Button (Inside the white box) -->
+                    <button
+                      class="absolute text-4xl top-2 right-2 text-gray-500 hover:text-gray-700"
+                      (click)="closeModal()"
                     >
-                  </button>
-                  <div
-                    *ngIf="activeIndex2 === i"
-                    class="bg-white text-gray-800 p-4 transition-all duration-300"
-                  >
+                      &times;
+                    </button>
+
+                    <!-- Sección superior con imagen y detalles -->
                     <div
-                      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4"
+                      class="flex flex-col md:flex-row items-center md:space-x-8"
                     >
-                      <div class="bg-white border overflow-hidden shadow-sm">
+                      <!-- Imagen de perfil -->
+                      <div class="mb-4 md:mb-0">
                         <img
-                          src="assets/images/noticias/img_noticia_1.jpg"
-                          alt="Noticia 1"
-                          class="w-full h-32 object-cover"
+                          src="{{ urlRaiz + item.ruta_imagen }}"
+                          alt="Imagen de perfil"
+                          class=""
                         />
-                        <div class="p-4">
-                          <p class="text-gray-700 text-sm font-parrafo">
-                            Lorem Ipsum es simplemente el texto de relleno de
-                            las imprentas y archivos de texto. Lorem Ipsum ha
-                            sido el texto de relleno estándar de las industrias
-                            desde el año 1500, cuando un impresor
-                          </p>
-                          <a href="#" class="text-yellow-400 mt-2 inline-block"
-                            >Ver publicación</a
-                          >
+                      </div>
+                      <!-- Nombre y Cargo -->
+                      <div>
+                        <h1 class="text-3xl font-bold text-gray-800">
+                          {{ item.nombre }}
+                        </h1>
+                        <p class="text-xl text-blue-500">
+                          {{ item.cargo }}
+                        </p>
+                        <!-- Íconos de contacto -->
+                        <div class="flex space-x-4 mt-4">
+                          <a href="#" target="_blank">
+                            <img
+                              class="h-8 w-8"
+                              src="assets/images/iconos/correo.png"
+                              alt="Email"
+                            />
+                          </a>
+                          <a href="#" target="_blank">
+                            <img
+                              class="h-8 w-8"
+                              src="assets/images/iconos/celular.png"
+                              alt="Email"
+                            />
+                          </a>
                         </div>
                       </div>
-                      <div class="bg-white border overflow-hidden shadow-sm">
-                        <img
-                          src="assets/images/noticias/img_noticia_2.jpg"
-                          alt="Noticia 2"
-                          class="w-full h-32 object-cover"
-                        />
-                        <div class="p-4">
-                          <p class="text-gray-700 text-sm font-parrafo">
-                            Lorem Ipsum es simplemente el texto de relleno de
-                            las imprentas y archivos de texto. Lorem Ipsum ha
-                            sido el texto de relleno estándar de las industrias
-                            desde el año 1500, cuando un impresor
-                          </p>
-                          <a href="#" class="text-yellow-400 mt-2 inline-block"
-                            >Ver publicación</a
-                          >
-                        </div>
-                      </div>
-                      <div class="bg-white border overflow-hidden shadow-sm">
-                        <img
-                          src="assets/images/noticias/img_noticia_3.jpg"
-                          alt="Noticia 3"
-                          class="w-full h-32 object-cover"
-                        />
-                        <div class="p-4">
-                          <p class="text-gray-700 text-sm font-parrafo">
-                            Lorem Ipsum es simplemente el texto de relleno de
-                            las imprentas y archivos de texto. Lorem Ipsum ha
-                            sido el texto de relleno estándar de las industrias
-                            desde el año 1500, cuando un impresor
-                          </p>
-                          <a href="#" class="text-yellow-400 mt-2 inline-block"
-                            >Ver publicación</a
-                          >
-                        </div>
-                      </div>
-                      <div class="bg-white border overflow-hidden shadow-sm">
-                        <img
-                          src="assets/images/noticias/img_noticia_4.jpg"
-                          alt="Noticia 4"
-                          class="w-full h-32 object-cover"
-                        />
-                        <div class="p-4">
-                          <p class="text-gray-700 text-sm font-parrafo">
-                            Lorem Ipsum es simplemente el texto de relleno de
-                            las imprentas y archivos de texto. Lorem Ipsum ha
-                            sido el texto de relleno estándar de las industrias
-                            desde el año 1500, cuando un impresor
-                          </p>
-                          <a href="#" class="text-yellow-400 mt-2 inline-block"
-                            >Ver publicación</a
-                          >
-                        </div>
+                    </div>
+
+                    <!-- Separador -->
+                    <hr class="my-8 border-gray-300" />
+
+                    <!-- Sección de experiencia, labores académicas y formación -->
+                    <div class="space-y-8">
+                      <div
+                        class="bg-white text-gray-800 p-4 transition-all duration-300 mb-4"
+                      >
+                        <div [innerHTML]="item.descripcion" class="mb-5"></div>
                       </div>
                     </div>
                   </div>

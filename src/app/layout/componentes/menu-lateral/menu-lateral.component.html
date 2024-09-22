@@ -22,13 +22,14 @@
           [innerHTML]="safeHtmlList[listTestimonios.indexOf(selectedItem)]"
         ></div>
       </div>
-
-      <button
-        class="text-red-800 font-bold hover:underline mt-4"
-        (click)="goToDetail(selectedItem.id_testimonio)"
-      >
-        {{ "VER_MAS_MAYUSCULA" | translate }}
-      </button>
+      <div class="text-right">
+        <button
+          class="text-[#156180] font-bold hover:underline mt-4 text-lg md:text-xl"
+          (click)="goToDetail(selectedItem.id_testimonio)"
+        >
+          {{ "VER_MAS_MAYUSCULA" | translate }}
+        </button>
+      </div>
     </div>
     <div *ngIf="!selectedItem" class="text-center text-gray-500 mt-20">
       Selecciona un elemento del menú para ver su contenido.

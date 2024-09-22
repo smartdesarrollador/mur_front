@@ -4,6 +4,74 @@
     'background-image': 'url(' + urlRaiz + listServicios.ruta_banner + ')'
   }"
 >
+  <div class="flex items-center justify-center h-full">
+    <h1 class="text-white text-4xl font-bold">Corporativo</h1>
+  </div>
+</section>
+
+<div class="container mx-auto py-10 px-4 text-justify">
+  <!-- Parte de descripción y experiencia en una sola columna -->
+  <div class="grid grid-cols-1 md:mx-20">
+    <!-- Descripción -->
+    <div class=" ">
+      <div class="ql-container ql-snow" style="border-width: 0">
+        <div class="ql-editor" [innerHTML]="safeHtml"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección de imágenes de personas en una columna -->
+  <div class="mt-10 flex justify-center gap-6">
+    <div class="flex flex-col items-center">
+      <img
+        src="{{ urlRaiz + listServicios.ruta_imagen_uno }}"
+        alt="Legal books"
+        class="w-full h-auto object-cover rounded-lg"
+      />
+      <p class="text-center text-gray-700 mt-2 font-semibold">
+        Carlos Enríquez
+      </p>
+      <p class="text-center text-gray-500">Gerente Corporativo M&A</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <img
+        src="{{ urlRaiz + listServicios.ruta_imagen_uno }}"
+        alt="Legal books"
+        class="w-full h-auto object-cover rounded-lg"
+      />
+      <p class="text-center text-gray-700 mt-2 font-semibold">
+        Allisson Trelles
+      </p>
+      <p class="text-center text-gray-500">Asociada Senior</p>
+    </div>
+    <!--  <div class="flex flex-col items-center">
+      <img
+        src="{{ urlRaiz + listServicios.ruta_imagen_uno }}"
+        alt="Legal books"
+        class="w-full h-auto object-cover rounded-lg"
+      />
+      <p class="text-center text-gray-700 mt-2 font-semibold">Ximena Samané</p>
+      <p class="text-center text-gray-500">Asociada Senior</p>
+    </div> -->
+  </div>
+
+  <!-- Botón de regreso -->
+  <div class="flex justify-center items-center mt-10">
+    <button
+      (click)="goBack()"
+      class="text-center bg-[#156180] text-white px-7 py-3 hover:bg-[#495464] rounded-full"
+    >
+      {{ "ATRAS" | translate }}
+    </button>
+  </div>
+</div>
+
+<!-- <section
+  class="bg-cover h-[400px] sm:h-screen bg-center bg-no-repeat bg-gray-700"
+  [ngStyle]="{
+    'background-image': 'url(' + urlRaiz + listServicios.ruta_banner + ')'
+  }"
+>
   <div class="px-10 max-w-full text-center py-24 lg:py-80"></div>
 </section>
 <div class="container mx-auto">
@@ -65,6 +133,13 @@
               class="w-full h-auto object-cover rounded-lg"
             />
           </div>
+          <div>
+            <img
+              src="{{ urlRaiz + listServicios.ruta_imagen_tres }}"
+              alt="Legal books"
+              class="w-full h-auto object-cover rounded-lg"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -80,3 +155,4 @@
     </div>
   </div>
 </div>
+ -->
