@@ -27,11 +27,16 @@ module.exports = {
         subtitulo: ["Ripple", "sans-serif"],
         texto: ["Ripple", "sans-serif"],
         titulo: ["Ripple", "sans-serif"], */
-        parrafo: ["FraktionSans", "sans-serif"],
+        /* parrafo: ["FraktionSans", "sans-serif"],
         test_fuente: ["Gloria Hallelujah", "cursive"],
         subtitulo: ["FraktionSans", "sans-serif"],
         texto: ["FraktionSans", "sans-serif"],
-        titulo: ["FraktionSans", "sans-serif"],
+        titulo: ["FraktionSans", "sans-serif"], */
+        parrafo: ["Poppins", "sans-serif"],
+        test_fuente: ["Gloria Hallelujah", "cursive"],
+        subtitulo: ["Poppins", "sans-serif"],
+        texto: ["Poppins", "sans-serif"],
+        titulo: ["Poppins", "sans-serif"],
 
         /* subtitulo: ["Cinzel", "serif"],
         texto: ["Montserrat", "sans-serif"],

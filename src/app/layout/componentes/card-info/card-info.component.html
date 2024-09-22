@@ -1,9 +1,9 @@
-<div class="flex items-center justify-center mt-16">
+<div class="flex items-center justify-center mb-16 bg-gray-100">
   <div
-    class="relative flex w-full max-w-[100%] mb-10 flex-row rounded-xl bg-white bg-clip-border text-gray-700"
+    class="relative flex w-full max-w-[100%] mb-10 flex-row rounded-xl bg-clip-border text-gray-700"
   >
     <div
-      class="hidden sm:inline-block relative m-0 w-2/5 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700"
+      class="hidden sm:inline-block relative m-0 w-2/5 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-gray-100 bg-clip-border text-gray-700"
     >
       <img src="assets/images/imagen-card.png" alt="image" class="w-[90%]" />
     </div>
@@ -18,14 +18,19 @@
       >
         {{ "TITULO_GERENTE" | translate }}
       </h2>
+      <h2
+        class="mb-2 block font-sans text-2xl font-parrafo leading-snug tracking-normal text-[#156180] font-thin antialiased"
+      >
+        {{ "CARGO" | translate }}
+      </h2>
 
       <p
-        class="mb-8 block font-sans text-justify text-xl leading-relaxed text-gray-500 antialiased"
+        class="mb-8 block text-justify font-parrafo font-thin text-xl leading-relaxed text-gray-400 antialiased"
       >
         {{ "DESCRIPCION_GERENTE" | translate }}
       </p>
       <p
-        class="mb-8 block font-sans text-justify text-xl leading-relaxed text-gray-500 antialiased"
+        class="mb-8 block text-justify font-parrafo font-thin text-xl leading-relaxed text-gray-500 antialiased"
       >
         Ha sido el asesor principal de más de 90 empresas extranjeras en el país
         y ha liderado proyectos de inversión. Ha conformado directorios y es
