@@ -4,9 +4,9 @@
     'background-image': 'url(' + urlRaiz + listServicios.ruta_banner + ')'
   }"
 >
-  <div class="flex items-center justify-center h-full">
+  <!--  <div class="flex items-center justify-center h-full">
     <h1 class="text-white text-4xl font-bold">Corporativo</h1>
-  </div>
+  </div> -->
 </section>
 
 <div class="container mx-auto py-10 px-4 text-justify">
@@ -21,28 +21,34 @@
   </div>
 
   <!-- Sección de imágenes de personas en una columna -->
-  <div class="mt-10 flex justify-center gap-6">
-    <div class="flex flex-col items-center">
+  <div class="mt-10 flex justify-center">
+    <div
+      *ngIf="listServicios.ruta_imagen_uno"
+      class="flex flex-col items-center"
+    >
       <img
         src="{{ urlRaiz + listServicios.ruta_imagen_uno }}"
         alt="Legal books"
-        class="w-full h-auto object-cover rounded-lg"
+        class="md:w-[70%] object-cover"
       />
-      <p class="text-center text-gray-700 mt-2 font-semibold">
+      <!-- <p class="text-center text-gray-700 mt-2 font-semibold">
         Carlos Enríquez
       </p>
-      <p class="text-center text-gray-500">Gerente Corporativo M&A</p>
+      <p class="text-center text-gray-500">Gerente Corporativo M&A</p> -->
     </div>
-    <div class="flex flex-col items-center">
+    <div
+      *ngIf="listServicios.ruta_imagen_dos"
+      class="flex flex-col items-center"
+    >
       <img
-        src="{{ urlRaiz + listServicios.ruta_imagen_uno }}"
+        src="{{ urlRaiz + listServicios.ruta_imagen_dos }}"
         alt="Legal books"
-        class="w-full h-auto object-cover rounded-lg"
+        class="md:w-[70%] object-cover"
       />
-      <p class="text-center text-gray-700 mt-2 font-semibold">
+      <!--  <p class="text-center text-gray-700 mt-2 font-semibold">
         Allisson Trelles
       </p>
-      <p class="text-center text-gray-500">Asociada Senior</p>
+      <p class="text-center text-gray-500">Asociada Senior</p> -->
     </div>
     <!--  <div class="flex flex-col items-center">
       <img

@@ -3,23 +3,19 @@
 <div class="container mx-auto">
   <div class="px-4 my-10">
     <h2
-      class="text-2xl sm:text-3xl md:text-4xl text-gray-700 font-semibold mb-4 leading-tight font-subtitulo border-b-4 inline border-yellow-400"
+      class="text-2xl sm:text-3xl md:text-4xl text-gray-500 font-semibold mb-4 font-subtitulo text-center"
     >
       {{ "TITULO_NUESTRO_EQUIPO" | translate }}
     </h2>
-    <p
+    <!-- <p
       class="mb-2 font-parrafo text-gray-800 text-lg sm:text-2xl mt-10 text-justify"
     >
       {{ "DESCRIPCION_NUESTRO_EQUIPO" | translate }}
-    </p>
+    </p> -->
 
     <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
       <div
-        *ngFor="
-          let item of listBanners
-            | paginate : { itemsPerPage: 12, currentPage: p };
-          let i = index
-        "
+        *ngFor="let item of listBanners; let i = index"
         class="flex flex-col bg-gray-100 rounded-lg p-6 shadow-lg space-y-4 w-full mx-auto my-8"
       >
         <!-- Imagen de perfil -->
@@ -42,14 +38,14 @@
           <a href="mailto:{{ item.correo }}" target="_blank">
             <img
               class="h-8 w-8"
-              src="assets/images/iconos/correo.png"
+              src="assets/images/iconos/email.png"
               alt="Email"
             />
           </a>
           <a href="{{ item.telefono }}" target="_blank">
             <img
               class="h-8 w-8"
-              src="assets/images/iconos/celular.png"
+              src="assets/images/iconos/linkedin.png"
               alt="LinkedIn"
             />
           </a>
@@ -74,7 +70,7 @@
                 <!-- Modal body -->
                 <div class="grid grid-cols-1 gap-6">
                   <div
-                    class="relative bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto"
+                    class="relative bg-white p-4 md:p-20 rounded-lg shadow-lg max-w-4xl mx-auto"
                   >
                     <!-- Close Button (Inside the white box) -->
                     <button
@@ -109,14 +105,14 @@
                           <a href="#" target="_blank">
                             <img
                               class="h-8 w-8"
-                              src="assets/images/iconos/correo.png"
+                              src="assets/images/iconos/email.png"
                               alt="Email"
                             />
                           </a>
                           <a href="#" target="_blank">
                             <img
                               class="h-8 w-8"
-                              src="assets/images/iconos/celular.png"
+                              src="assets/images/iconos/linkedin.png"
                               alt="Email"
                             />
                           </a>
@@ -124,13 +120,10 @@
                       </div>
                     </div>
 
-                    <!-- Separador -->
-                    <hr class="my-8 border-gray-300" />
-
                     <!-- Sección de experiencia, labores académicas y formación -->
                     <div class="space-y-8">
                       <div
-                        class="bg-white text-gray-800 p-4 transition-all duration-300 mb-4"
+                        class="bg-white text-gray-800 transition-all duration-300 mb-4 border border-gray-500 rounded-2xl p-8 border-2 mt-10"
                       >
                         <div [innerHTML]="item.descripcion" class="mb-5"></div>
                       </div>
@@ -146,12 +139,12 @@
   </div>
 </div>
 
-<div class="flex items-center justify-center">
+<!-- <div class="flex items-center justify-center">
   <pagination-controls
     (pageChange)="p = $event"
     previousLabel="Anterior"
     nextLabel="Siguiente"
   ></pagination-controls>
-</div>
+</div> -->
 
 <!-- /7.- CRUD-BASICO-V1-P3 -->
