@@ -1,7 +1,13 @@
 <section
-  class="bg-cover h-[400px] sm:h-screen bg-center bg-no-repeat bg-[url('assets/images/banners/nuestras-areas.jpg')] bg-gray-700"
+  class="relative bg-cover h-[400px] sm:h-screen bg-center bg-no-repeat bg-[url('assets/images/banners/nuestras-areas.jpg')] bg-gray-700"
 >
+  <!-- Degradado negro en la parte inferior -->
   <div
-    class="px-10 max-w-[100%] md:max-w-[100%] text-center py-24 lg:py-80"
+    class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"
   ></div>
+
+  <!-- Contenedor para el texto -->
+  <div class="absolute bottom-0 w-full text-center pb-6">
+    <h1 class="text-white text-4xl font-titulo">Nuestras áreas</h1>
+  </div>
 </section>
