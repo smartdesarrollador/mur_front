@@ -4,6 +4,8 @@ import { initFlowbite } from 'flowbite';
 /* 11.- TRANSLATE-V1  */
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 /* /11.- TRANSLATE-V1  */
+import { TestimonioService } from 'src/app/services/testimonio.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-navbar-dropdown',
@@ -13,12 +15,15 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
     /* 12.- TRANSLATE-V1  */
     TranslateModule,
     /* /12.- TRANSLATE-V1  */
+    CommonModule,
   ],
   templateUrl: './navbar-dropdown.component.html',
   styleUrl: './navbar-dropdown.component.css',
 })
 export class NavbarDropdownComponent implements OnInit {
+  listTestimonios: any;
   constructor(
+    private dataService: TestimonioService,
     /* 13.- TRANSLATE-V1  */ private translate: TranslateService /* /13.- TRANSLATE-V1  */
   ) {}
 
@@ -30,5 +35,13 @@ export class NavbarDropdownComponent implements OnInit {
 
   ngOnInit(): void {
     initFlowbite();
+    this.loadTestimonios();
+  }
+
+  loadTestimonios(): void {
+    this.dataService.getCategories().subscribe((data: any) => {
+      console.log(data);
+      this.listTestimonios = data;
+    });
   }
 }

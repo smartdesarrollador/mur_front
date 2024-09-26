@@ -95,157 +95,48 @@
           >
             <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white">
               <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button">
-                <li>
-                  <a
-                    routerLink="/areas/servicio/1"
-                    class="text-gray-500 dark:text-gray-400 hover:text-yellow-400 dark:hover:text-blue-500"
-                  >
-                    {{ "ENLACE_LEGAL_COMPLIANCE" | translate }}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    routerLink="/areas/servicio/2"
-                    class="text-gray-500 dark:text-gray-400 hover:text-yellow-400 dark:hover:text-blue-500"
-                  >
-                    {{ "ENLACE_CORPORATIVO" | translate }}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    routerLink="/areas/servicio/3"
-                    class="text-gray-500 dark:text-gray-400 hover:text-yellow-400 dark:hover:text-blue-500"
-                  >
-                    {{ "ENLACE_FUNSIONES" | translate }}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    routerLink="/areas/servicio/4"
-                    class="text-gray-500 dark:text-gray-400 hover:text-yellow-400 dark:hover:text-blue-500"
-                  >
-                    {{ "ENLACE_DERECHO" | translate }}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    routerLink="/areas/servicio/5"
-                    class="text-gray-500 dark:text-gray-400 hover:text-yellow-400 dark:hover:text-blue-500"
-                  >
-                    {{ "ENLACE_PRECIOS" | translate }}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    routerLink="/areas/servicio/6"
-                    class="text-gray-500 dark:text-gray-400 hover:text-yellow-400 dark:hover:text-blue-500"
-                  >
-                    {{ "ENLACE_LABORAL" | translate }}
-                  </a>
+                <li *ngFor="let item of listTestimonios; let i = index">
+                  <div *ngIf="i < listTestimonios.length / 3">
+                    <a
+                      [routerLink]="'/areas/servicio/' + item.id_testimonio"
+                      class="text-gray-500 dark:text-gray-400 hover:text-yellow-400 dark:hover:text-blue-500"
+                    >
+                      {{ item.titulo }}
+                    </a>
+                  </div>
                 </li>
               </ul>
             </div>
             <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white">
-              <ul class="space-y-4">
-                <li>
-                  <a
-                    routerLink="/areas/servicio/7"
-                    class="text-gray-500 dark:text-gray-400 hover:text-yellow-400 dark:hover:text-blue-500"
+              <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button">
+                <li *ngFor="let item of listTestimonios; let i = index">
+                  <div
+                    *ngIf="
+                      i >= listTestimonios.length / 3 &&
+                      i < (listTestimonios.length * 2) / 3
+                    "
                   >
-                    {{ "ENLACE_MIGRATORIO" | translate }}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    routerLink="/areas/servicio/8"
-                    class="text-gray-500 dark:text-gray-400 hover:text-yellow-400 dark:hover:text-blue-500"
-                  >
-                    {{ "ENLACE_INMOBILIARIO" | translate }}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    routerLink="/areas/servicio/9"
-                    class="text-gray-500 dark:text-gray-400 hover:text-yellow-400 dark:hover:text-blue-500"
-                  >
-                    {{ "ENLACE_ADMINISTRATIVO" | translate }}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    routerLink="/areas/servicio/10"
-                    class="text-gray-500 dark:text-gray-400 hover:text-yellow-400 dark:hover:text-blue-500"
-                  >
-                    {{ "ENLACE_PROTECCION" | translate }}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    routerLink="/areas/servicio/11"
-                    class="text-gray-500 dark:text-gray-400 hover:text-yellow-400 dark:hover:text-blue-500"
-                  >
-                    {{ "ENLACE_CONSUMIDOR" | translate }}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    routerLink="/areas/servicio/22"
-                    class="text-gray-500 dark:text-gray-400 hover:text-yellow-400 dark:hover:text-blue-500"
-                  >
-                    {{ "ENLACE_PROPIEDAD" | translate }}
-                  </a>
+                    <a
+                      [routerLink]="'/areas/servicio/' + item.id_testimonio"
+                      class="text-gray-500 dark:text-gray-400 hover:text-yellow-400 dark:hover:text-blue-500"
+                    >
+                      {{ item.titulo }}
+                    </a>
+                  </div>
                 </li>
               </ul>
             </div>
             <div class="p-4">
-              <ul class="space-y-4">
-                <li>
-                  <a
-                    routerLink="/areas/servicio/13"
-                    class="text-gray-500 dark:text-gray-400 hover:text-yellow-400 dark:hover:text-blue-500"
-                  >
-                    {{ "ENLACE_CONTRATACIONES" | translate }}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    routerLink="/areas/servicio/14"
-                    class="text-gray-500 dark:text-gray-400 hover:text-yellow-400 dark:hover:text-blue-500"
-                  >
-                    {{ "ENLACE_REGULATORIO" | translate }}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    routerLink="/areas/servicio/15"
-                    class="text-gray-500 dark:text-gray-400 hover:text-yellow-400 dark:hover:text-blue-500"
-                  >
-                    {{ "ENLACE_GUBERNAMENTALES" | translate }}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    routerLink="/areas/servicio/16"
-                    class="text-gray-500 dark:text-gray-400 hover:text-yellow-400 dark:hover:text-blue-500"
-                  >
-                    {{ "ENLACE_SOCIALES" | translate }}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    routerLink="/areas/servicio/17"
-                    class="text-gray-500 dark:text-gray-400 hover:text-yellow-400 dark:hover:text-blue-500"
-                  >
-                    {{ "ENLACE_SEGURIDAD" | translate }}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    routerLink="/areas/servicio/18"
-                    class="text-gray-500 dark:text-gray-400 hover:text-yellow-400 dark:hover:text-blue-500"
-                  >
-                    Tributario
-                  </a>
+              <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button">
+                <li *ngFor="let item of listTestimonios; let i = index">
+                  <div *ngIf="i >= (listTestimonios.length * 2) / 3">
+                    <a
+                      [routerLink]="'/areas/servicio/' + item.id_testimonio"
+                      class="text-gray-500 dark:text-gray-400 hover:text-yellow-400 dark:hover:text-blue-500"
+                    >
+                      {{ item.titulo }}
+                    </a>
+                  </div>
                 </li>
               </ul>
             </div>
