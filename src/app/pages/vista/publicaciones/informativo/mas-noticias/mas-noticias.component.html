@@ -1,5 +1,7 @@
-<h1 class="text-5xl">{{ "MAS" | translate }}</h1>
-<h1 class="text-5xl">{{ "NOTICIAS" | translate }}</h1>
+<div class="mt-10 ml-5 sm:mt-0 sm:ml-0">
+  <h1 class="text-5xl">{{ "MAS" | translate }}</h1>
+  <h1 class="text-5xl">{{ "NOTICIAS" | translate }}</h1>
+</div>
 
 @for (item of listInformativos; track item.id) { @if(item.destacado == "true"){
 <div class="w-full mt-7">

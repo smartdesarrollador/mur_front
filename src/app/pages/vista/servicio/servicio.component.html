@@ -29,7 +29,7 @@
   </div>
 
   <!-- Sección de imágenes de personas en una columna -->
-  <div class="mt-10 flex justify-center">
+  <div class="mt-10 flex flex-col md:flex-row justify-center gap-14">
     <div
       *ngIf="listServicios.ruta_imagen_uno"
       class="flex flex-col items-center"
@@ -37,12 +37,8 @@
       <img
         src="{{ urlRaiz + listServicios.ruta_imagen_uno }}"
         alt="Legal books"
-        class="md:w-[70%] object-cover"
+        class="h-[500px] object-cover"
       />
-      <!-- <p class="text-center text-gray-700 mt-2 font-semibold">
-        Carlos Enríquez
-      </p>
-      <p class="text-center text-gray-500">Gerente Corporativo M&A</p> -->
     </div>
     <div
       *ngIf="listServicios.ruta_imagen_dos"
@@ -51,22 +47,9 @@
       <img
         src="{{ urlRaiz + listServicios.ruta_imagen_dos }}"
         alt="Legal books"
-        class="md:w-[70%] object-cover"
+        class="h-[500px] object-cover"
       />
-      <!--  <p class="text-center text-gray-700 mt-2 font-semibold">
-        Allisson Trelles
-      </p>
-      <p class="text-center text-gray-500">Asociada Senior</p> -->
     </div>
-    <!--  <div class="flex flex-col items-center">
-      <img
-        src="{{ urlRaiz + listServicios.ruta_imagen_uno }}"
-        alt="Legal books"
-        class="w-full h-auto object-cover rounded-lg"
-      />
-      <p class="text-center text-gray-700 mt-2 font-semibold">Ximena Samané</p>
-      <p class="text-center text-gray-500">Asociada Senior</p>
-    </div> -->
   </div>
 
   <!-- Botón de regreso -->

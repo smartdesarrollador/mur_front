@@ -58,7 +58,10 @@
           <h2 class="text-xl font-bold mt-1 text-gray-800 py-4">
             {{ item.titulo }}
           </h2>
-          <div class="ql-container ql-snow" style="border-width: 0">
+          <div
+            class="ql-container ql-snow sm:h-[125px]"
+            style="border-width: 0"
+          >
             <div class="ql-editor" [innerHTML]="safeHtmlList[i]"></div>
           </div>
           <div class="mt-4 flex justify-center">
