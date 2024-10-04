@@ -1,5 +1,7 @@
 <section
-  class="relative only:bg-cover h-[400px] sm:h-screen bg-center bg-no-repeat bg-[url('assets/images/banners/firma.jpg')] bg-gray-700"
+  *ngFor="let item of listBanners"
+  class="relative only:bg-cover h-[400px] sm:h-screen bg-center bg-no-repeat bg-gray-700"
+  [ngStyle]="{ 'background-image': 'url(' + urlRaiz + item.ruta_imagen + ')' }"
 >
   <!-- Degradado negro en la parte inferior -->
   <div
