@@ -9,6 +9,9 @@
 @import "~quill/dist/quill.bubble.css";
 @import "~quill/dist/quill.snow.css";
 
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 body {
   /* background-color: #c6d8e7; */
   background-color: #fff;
@@ -118,3 +121,75 @@ body {
   background: #495464 !important;
 }
 /* /7.- PAGINATION-V1 */
+/* comentario slick css */
+.slick-carousel {
+  width: 80%;
+  margin: auto;
+}
+
+.slick-slide img {
+  width: 100%;
+  display: block;
+}
+
+.slick-arrow {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  width: 45px;
+  height: 45px;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.8
+  ) !important; /* Forzamos el color de fondo */
+  border-radius: 50%;
+  color: #fff !important; /* Forzamos el color del texto */
+  border: none;
+  opacity: 0.85;
+  transition: all 0.3s ease;
+  font-size: 18px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.slick-arrow:hover {
+  background-color: rgba(0, 0, 0, 1) !important;
+  opacity: 1;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 1;
+}
+
+.slick-prev {
+  left: 15px;
+}
+
+.slick-next {
+  right: 15px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  display: inline-block !important;
+  font-size: 24px !important;
+  color: #fff !important;
+  opacity: 1 !important;
+}
+
+.slick-prev:before {
+  content: "←" !important;
+}
+
+.slick-next:before {
+  content: "→" !important;
+}
+
+/* Eliminamos estos estilos si no estamos usando iconos personalizados */
+/* .slick-prev i,
+.slick-next i {
+  font-size: 24px;
+} */

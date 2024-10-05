@@ -1,7 +1,29 @@
-<section
+<!-- <section
   class="bg-cover h-[400px] sm:h-screen bg-center bg-no-repeat bg-[url('assets/images/banners/publicaciones.jpg')] bg-gray-700"
 >
+  
   <div
-    class="px-10 max-w-[100%] md:max-w-[100%] text-center py-24 lg:py-80"
+    class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"
   ></div>
+
+  
+  <div class="absolute bottom-0 w-full text-center pb-6">
+    <h1 class="text-white text-4xl font-titulo">Publicaciones</h1>
+  </div>
+</section> -->
+
+<section
+  *ngFor="let item of listBanners"
+  class="relative only:bg-cover h-[400px] sm:h-screen bg-center bg-no-repeat bg-gray-700"
+  [ngStyle]="{ 'background-image': 'url(' + urlRaiz + item.ruta_imagen + ')' }"
+>
+  <!-- Degradado negro en la parte inferior -->
+  <div
+    class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"
+  ></div>
+
+  <!-- Contenedor para el texto -->
+  <div class="absolute bottom-0 w-full text-center pb-6">
+    <h1 class="text-white text-4xl font-titulo">Publicaciones</h1>
+  </div>
 </section>
