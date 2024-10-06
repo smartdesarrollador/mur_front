@@ -1,1 +1,19 @@
-<p>reconocimientos works!</p>
+<ngx-slick-carousel class="multiple-items" [config]="slideConfig">
+  <div
+    ngxSlickItem
+    *ngFor="let item of listTestimonios"
+    class="overflow-hidden mx-5 max-h-[300px] my-10"
+  >
+    <div class="p-6 text-center">
+      <img
+        class="max-w-[100px] max-h-[100px] my-5 mx-auto my-10"
+        src="{{ urlRaiz + item.ruta_imagen }}"
+        alt="Profile Image"
+      />
+      <!-- <div class="ql-container ql-snow" style="border-width: 0">
+        <div class="ql-editor" [innerHTML]="item.descripcion"></div>
+      </div>
+      <h2 class="text-2xl font-semibold mb-2">{{ item.titulo }}</h2> -->
+    </div>
+  </div>
+</ngx-slick-carousel>
