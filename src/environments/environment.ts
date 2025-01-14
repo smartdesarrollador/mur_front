@@ -87,6 +87,9 @@ export const environment = {
     'https://api.hawatech.agency/api/slider/reconocimiento',
   apiDeleteFileSliderReconocimiento:
     'https://api.hawatech.agency/api/slider/reconocimiento',
+  apiUrlMision: 'https://api.hawatech.agency/api/mision',
+  apiUrlMisionActualizar: 'https://api.hawatech.agency/api/mision/actualizar',
+  apiUrlMisionUpdate: 'https://api.hawatech.agency/api/mision/update/upload',
 };
 
 /* export const environment = {
