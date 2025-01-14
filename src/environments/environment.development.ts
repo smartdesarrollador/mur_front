@@ -76,4 +76,7 @@ export const environment = {
     'http://127.0.0.1:8000/api/slider/reconocimiento',
   apiDeleteFileSliderReconocimiento:
     'http://127.0.0.1:8000/api/slider/reconocimiento',
+  apiUrlMision: 'http://127.0.0.1:8000/api/mision',
+  apiUrlMisionActualizar: 'http://127.0.0.1:8000/api/mision/actualizar',
+  apiUrlMisionUpdate: 'http://127.0.0.1:8000/api/mision/update/upload',
 };
