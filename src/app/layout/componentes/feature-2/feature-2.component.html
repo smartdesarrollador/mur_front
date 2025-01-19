@@ -3,37 +3,14 @@
 </h1>
 
 <div class="grid grid-cols-1 md:grid-cols-4 my-10 gap-2">
-  <div class="p-8 bg-gray-200">
-    <div class="text-center text-[100px] font-titulo">8</div>
+  <div *ngFor="let mision of datos_mision" class="p-8 bg-gray-200">
+    <div class="text-center text-[100px] font-titulo">
+      {{ mision.titulo_mision }}
+    </div>
     <h2
       class="text-center font-parrafo text-2xl md:4xl mt-6 text-gray-500 italic font-medium mb-3"
     >
-      {{ "TIEMPO_EXPERIENCIA" | translate }}
-    </h2>
-  </div>
-  <div class="p-8 bg-gray-200">
-    <div class="text-center text-[100px] font-titulo">+150</div>
-    <h2
-      class="text-center font-parrafo text-2xl md:4xl mt-6 text-gray-500 italic font-medium mb-3"
-    >
-      {{ "CLIENTES_SATISFECHOS" | translate }}
-    </h2>
-  </div>
-  <div class="p-8 bg-gray-200">
-    <div class="text-center text-[100px] font-titulo">100%</div>
-    <h2
-      class="text-center font-parrafo text-2xl md:4xl mt-6 text-gray-500 italic font-medium mb-3"
-    >
-      {{ "RESPONSABILIDAD_SOCIAL" | translate }}
-    </h2>
-  </div>
-  <div class="p-8 bg-gray-200">
-    <div class="text-center text-[100px] font-titulo">1#</div>
-
-    <h2
-      class="text-center font-parrafo text-2xl md:4xl mt-6 text-gray-500 italic font-medium mb-3"
-    >
-      {{ "INNOVACION_LEGAL" | translate }}
+      {{ mision.contenido_mision | translate }}
     </h2>
   </div>
 </div>
