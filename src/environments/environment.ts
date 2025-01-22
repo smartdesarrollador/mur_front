@@ -90,6 +90,10 @@ export const environment = {
   apiUrlMision: 'https://api.hawatech.agency/api/mision',
   apiUrlMisionActualizar: 'https://api.hawatech.agency/api/mision/actualizar',
   apiUrlMisionUpdate: 'https://api.hawatech.agency/api/mision/update/upload',
+  apiUrl3Industrias: 'https://api.hawatech.agency/api/industrias/subir',
+  apiUpdateFileIndustrias: 'https://api.hawatech.agency/api/industrias/update',
+  apiListarFilesIndustrias: 'https://api.hawatech.agency/api/industrias',
+  apiDeleteFileIndustrias: 'https://api.hawatech.agency/api/industrias',
 };
 
 /* export const environment = {

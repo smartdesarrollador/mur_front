@@ -79,4 +79,9 @@ export const environment = {
   apiUrlMision: 'http://127.0.0.1:8000/api/mision',
   apiUrlMisionActualizar: 'http://127.0.0.1:8000/api/mision/actualizar',
   apiUrlMisionUpdate: 'http://127.0.0.1:8000/api/mision/update/upload',
+
+  apiUrl3Industrias: 'http://127.0.0.1:8000/api/industrias/subir',
+  apiUpdateFileIndustrias: 'http://127.0.0.1:8000/api/industrias/update',
+  apiListarFilesIndustrias: 'http://127.0.0.1:8000/api/industrias',
+  apiDeleteFileIndustrias: 'http://127.0.0.1:8000/api/industrias',
 };
